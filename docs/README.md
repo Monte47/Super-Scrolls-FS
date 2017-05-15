@@ -34,29 +34,29 @@ SuperScrolls is a web application inspired by GoodReads built using Ruby on Rail
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (W7D1-2)
+### Phase 1: Backend setup and Front End User Authentication (W8D1-2)
 
 **Objective:** Functioning Rails Project with Front-End Authentication
 
-### Phase 2: Books Model, API, and components (W7D3-4)
+### Phase 2: Books Model, API, and components (W8D3-4)
 
 **Objective** Books can be created, edited, viewed(index and show), and destroyed, through the API
 
-### Phase 3: Bookshelves (W7D5-6)
+### Phase 3: Bookshelves (W8D5-6)
 
 **Objective** Bookshelves will belong to a User. Bookshelves can be created, edited, viewed, and destroyed through the API. Books can be added to, and taken off of Bookshelves. Default Bookshelves will be "Have Read", "Currently Reading", and "Want to Read"
 
-### Phase 4: Reviews (W7D7)
+### Phase 4: Reviews (W8D7)
 
 **Objective** Reviews will belong to both a book and a user. Reviews can be created, edited, and destroyed through the API. Reviews will be displayed on the Book Show page.
 
-### Phase 5: Search (W8D1-2)
+### Phase 5: Search (W9D1-2)
 
 **Objective** Users will be able to search for books. Search will be displayed in a NavBar.
 
-### Phase 6: Styling (W8D3-5)
+### Phase 6: Styling and Seeding Database (W9D3-5)
 
-**Objective** Add CSS styling and additional images to App
+**Objective** Add Additional CSS styling as well as screen resolution scaling. Seed Database with books / Bookshelves for Demo User.
 
 ### Bonus Features (TBD)
 

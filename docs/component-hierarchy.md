@@ -48,8 +48,8 @@
 | "/sign-up" | "AuthFormContainer" |
 | "/sign-in" | "AuthFormContainer" |
 | "/books" | "BookIndexContainer" |
-| "/home/books/:bookId" | "BookDetailContainer" |
-| "/home/bookshelves/:bookshelfId/" | "BookshelfContainer" |
-| "/home/search-results" | "SearchResultsContainer"
+| "/books/:bookId" | "BookDetailContainer" |
+| "/bookshelves/:bookshelfId/" | "BookshelfContainer" |
+| "/search-results" | "SearchResultsContainer"
 | "/new-book" | "NewBookContainer" |
-| "/new-notebook" | "NewNotebook" |
+| "/new-bookshelf" | "NewBookshelf" |

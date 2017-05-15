@@ -21,16 +21,8 @@
   },
   bookshelves: {
     1: {
-      title: "Redux",
+      title: "Shelf Title",
       user_id: 1,
-      books: {
-        1: {
-          title: "Sample State",
-          author: "is useful to plan",
-          imageUrl: "/a/location",
-          description: "A description about a book"
-        }
-      }
     }
   },
   reviews: {
