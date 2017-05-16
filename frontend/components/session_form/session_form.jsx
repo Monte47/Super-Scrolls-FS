@@ -31,13 +31,17 @@ class SessionForm extends React.Component {
     }
   }
 
+  handleDemo(e) {
+    e.preventDefault();
+    this.props.login({username: "Monte", password:"password"});
+  }
+
 
   render() {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to SuperScrolls!
-          <br></br>
+          <div className="login-form-welcome">Welcome to SuperScrolls</div>
           <div className="login-form">
             <br/>
             <label>Username:
@@ -59,6 +63,8 @@ class SessionForm extends React.Component {
             <input type="submit" value="Submit" />
             <br></br>
             {this.navLink()}
+            <br></br>
+            <button className="demo-button" onClick={this.handleDemo.bind(this)} type="button">Demo</button>
           </div>
         </form>
       </div>

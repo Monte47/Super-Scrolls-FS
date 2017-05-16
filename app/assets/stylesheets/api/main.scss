@@ -1,4 +1,26 @@
+body {
+  margin: 0px;
+}
+
 #root {
   background-color: #ccdfcb;
   font-family: Comfortaa;
+}
+
+button {
+  background-color: #056571;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 50px;
+  width: 100px;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #03464f
 }
