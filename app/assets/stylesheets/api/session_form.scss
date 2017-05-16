@@ -37,7 +37,7 @@
   justify-content: center;
   align-items: center;
   font-family: Patua One;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .login-form input {
@@ -73,4 +73,5 @@
 
 #login-submit:hover {
   background-color: #cccccc;
+  cursor: pointer;
 }
