@@ -18,15 +18,19 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className='navbar'>
-        <span className="NavTitle">SuperScrolls</span>
-        <button onClick={this.handleDemo.bind(this)} type="button">Demo</button>
-        <Link to="/login">
-          <button type="button" className='Login Button'>Login</button>
-        </Link>
-        <Link to="/signup">
-          <button type="button" className="Signup Button">Sign Up</button>
-        </Link>
-        <button onClick={this.handleLogout.bind(this)} type="button" className="Logout Button">Logout</button>
+        <div className="LeftNav">
+          <span className="NavTitle">SuperScrolls</span>
+        </div>
+        <div className="RightNav">
+          <button onClick={this.handleDemo.bind(this)} type="button">Demo</button>
+          <Link to="/login">
+            <button type="button" className='Login Button'>Login</button>
+          </Link>
+          <Link to="/signup">
+            <button type="button" className="Signup Button">Sign Up</button>
+          </Link>
+          <button onClick={this.handleLogout.bind(this)} type="button" className="Logout Button">Logout</button>
+        </div>
       </nav>
     );
   }
