@@ -3,24 +3,40 @@ body {
 }
 
 #root {
-  background-color: #ccdfcb;
+  background-color: #233237;
   font-family: Comfortaa;
 }
 
 button {
-  background-color: #056571;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eac67a;
   border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
+  color: back;
+  padding: 15px;
   text-decoration: none;
-  display: inline-block;
+  font-family: Comfortaa;
   font-size: 16px;
   height: 50px;
   width: 100px;
   align-self: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 button:hover {
-  background-color: #03464f
+  background-color: #a38a55;
+}
+
+a {
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+a:hover {
+  color: white;
 }

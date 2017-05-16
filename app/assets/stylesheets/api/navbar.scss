@@ -3,19 +3,23 @@
   display: flex;
   width: 100%;
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   justify-content: space-between;
-  background-color: #414141;
+  background-color: #18121E;
   color: white;
 }
 
 .RightNav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 20px;
 }
 
 .LeftNav {
   display: flex;
   font-family: Righteous;
   font-size: 30px;
+  align-items: center;
+  padding-left: 20px;
 }
