@@ -5,6 +5,9 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import { signup, login, logout } from './actions/session_actions';
+import { createBook, receiveBooks, receiveBook, requestBooks, requestBook } from './actions/book_actions';
+import { fetchBooks } from './util/book_api_util';
+import { selectBooks } from './reducers/selectors';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,11 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  
+
   window.signup = signup;
   window.login = login;
   window.logout = logout;
   window.store = store;
+  window.createBook = createBook;
+  window.receiveBooks = receiveBooks;
+  window.receiveBook = receiveBook;
+  window.requestBooks = requestBooks;
+  window.requestBook = requestBook;
+  window.fetchBooks = fetchBooks;
+  window.selectBooks = selectBooks;
 
 
   const root = document.getElementById('root');
