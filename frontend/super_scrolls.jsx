@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Provider } from 'react-redux';
-import { HashRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import configureStore from './store/store';
+import Root from './components/root';
 
 import { signup, login, logout } from './actions/session_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  let store = configureStore();
+  let store;
+  if (window.currentUser) {
+    const preloadedState = { session: { currentUser: window.currentUser } };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
 
+  
   window.signup = signup;
   window.login = login;
   window.logout = logout;
@@ -19,13 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
 
-  const Root = () => (
-    <Provider store={store}>
-      <HashRouter>
-        <h1>React is not working...yet</h1>
-      </HashRouter>
-    </Provider>
-  );
-
-  ReactDom.render(<Root />, root);
+  ReactDom.render(<Root store={store}/>, root);
 });
