@@ -9,7 +9,7 @@ class EditBookForm extends React.Component {
       author: "",
       description: "",
       image_url: "",
-      id: parseInt(this.props.match.params.id)
+      id: parseInt(this.props.match.params.bookId)
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -19,6 +19,7 @@ class EditBookForm extends React.Component {
   }
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
     this.props.updateBook(this.state)
     .then(this.props.history.push(`/books/${this.state.id}`));
@@ -28,15 +29,22 @@ class EditBookForm extends React.Component {
     return e => this.setState({ [property]: e.target.value });
   }
 
+  errors() {
+    if (this.props.errors) {
+      return (
+        this.props.errors.map(error => {
+          return (<li className="error" key={error}>{error}</li>);
+        })
+      );
+    }
+  }
+
   render() {
     return (
       <section className="create-book">
         <div className="book-form-box">
           <h2>Create a New Book</h2>
           <form className="book-form" onSubmit={this.handleSubmit}>
-            <ul className="errors-list">
-              {this.errors()}
-            </ul>
             <input
               type="text"
               value={this.state.title}
