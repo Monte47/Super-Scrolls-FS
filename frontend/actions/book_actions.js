@@ -23,6 +23,10 @@ export const createBook = book => dispatch => {
   }).fail(err => dispatch(receiveBookErrors(err.responseJSON)));
 };
 
+export const destroyBook = (id) => dispatch => {
+  return APIUtil.destroyBook(id).then(book => dispatch(deleteBook(book)));
+};
+
 export const receiveBooks = books => ({
   type: RECEIVE_BOOKS,
   books
@@ -35,6 +39,11 @@ export const receiveBook = book => ({
 
 export const receiveNewBook = book => ({
   type: RECEIVE_NEW_BOOK,
+  book
+});
+
+export const deleteBook = book => ({
+  type: DELETE_BOOK,
   book
 });
 

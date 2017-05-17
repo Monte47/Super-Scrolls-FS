@@ -16,7 +16,9 @@ class Navbar extends React.Component {
       return (
         <nav className='navbar'>
           <div className="LeftNav">
-            <span className="NavTitle">SuperScrolls</span>
+            <Link to="/">
+              <span id="nav-title">SuperScrolls</span>
+            </Link>
           </div>
           <div className="RightNav">
             <button onClick={this.handleLogout.bind(this)} type="button" className="Logout Button">Logout</button>

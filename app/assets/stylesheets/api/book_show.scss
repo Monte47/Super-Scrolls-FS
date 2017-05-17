@@ -1,0 +1,43 @@
+.book-show {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  height: 100vh;
+}
+
+.inner-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  border-radius: 10px;
+  background-color: #984b43;
+}
+
+.book-detail-headers {
+  padding: 30px;
+  font-family: Patua One;
+}
+
+.book-description {
+  border-top: 1px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  padding: 30px;
+  align-items: flex-start;
+  height: 100%
+
+}
+
+.book-show img {
+  height: 70vh;
+  width: 50vh;
+}
