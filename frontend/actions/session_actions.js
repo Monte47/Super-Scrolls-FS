@@ -2,7 +2,12 @@ import * as APIUtil from '../util/session_api_util';
 
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
+export const CLEAR_SESSION_ERRORS = "CLEAR_SESSION_ERRORS";
 
+export const clearSessionErrors = errors => ({
+  type: CLEAR_SESSION_ERRORS,
+  errors
+});
 
 export const receiveCurrentUser = (currentUser) => ({
   type: RECEIVE_CURRENT_USER,

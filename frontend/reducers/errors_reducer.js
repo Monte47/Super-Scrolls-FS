@@ -1,4 +1,4 @@
-import { RECEIVE_BOOK_ERRORS } from '../actions/book_actions';
+import { RECEIVE_BOOK_ERRORS, CLEAR_BOOK_ERRORS } from '../actions/book_actions';
 import { RECEIVE_ERRORS } from '../actions/session_actions';
 
 const ErrorsReducer = (state = [], action) => {
@@ -6,6 +6,8 @@ const ErrorsReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_BOOK_ERRORS:
       return [...action.errors];
+    case CLEAR_BOOK_ERRORS:
+      return [];
     default:
       return state;
   }

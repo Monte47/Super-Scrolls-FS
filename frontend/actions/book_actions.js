@@ -5,8 +5,14 @@ export const UPDATE_BOOK = "UPDATE_BOOK";
 export const DELETE_BOOK = "DELETE_BOOK";
 export const RECEIVE_NEW_BOOK = "RECEIVE_NEW_BOOK";
 export const RECEIVE_BOOK_ERRORS = "RECEIVE_BOOK_ERRORS";
+export const CLEAR_BOOK_ERRORS = "CLEAR_BOOK_ERRORS";
 
 import * as APIUtil from '../util/book_api_util';
+
+export const clearBookErrors = errors => ({
+  type: CLEAR_BOOK_ERRORS,
+  errors
+});
 
 export const requestBooks = () => dispatch => {
   return APIUtil.fetchBooks().then(books => dispatch(receiveBooks(books)));
