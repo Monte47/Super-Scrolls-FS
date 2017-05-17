@@ -12,6 +12,9 @@ class BooksIndex extends React.Component {
     const { books } = this.props;
     return (
       <section className="books-index">
+        <Link to="/book/new">
+          <button type="button" className="new-book-button">New Book</button>
+        </Link>
         <ul>
           {books.map(book => <BooksIndexItem key={book.id} book={book} />)}
         </ul>

@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -36,6 +37,16 @@ class SessionForm extends React.Component {
     this.props.login({username: "Monte", password:"password"});
   }
 
+  errors() {
+    if(this.props.errors.length > 0) {
+      return (
+        this.props.errors.map(error => {
+          return (<li className="error" key={error}>{error}</li>);
+        })
+      );
+    }
+  }
+
 
   render() {
     return (
@@ -43,6 +54,9 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <div className="login-form-welcome">Welcome to SuperScrolls</div>
           <div className="login-form">
+            <ul className="errors-list">
+              {this.errors()}
+            </ul>
             <br/>
             <input type="text"
               value={this.state.username}

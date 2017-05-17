@@ -16,12 +16,12 @@ export const requestBook = (id) => dispatch => {
   return APIUtil.fetchBook(id).then(book => dispatch(receiveBook(book)));
 };
 
-export const createBook = book => dispatch => (
-  APIUtil.createBook(book).then(book => {
+export const createBook = book => dispatch => {
+  return APIUtil.createBook(book).then(book => {
     dispatch(receiveNewBook(book));
     return book;
-  }).fail(err => dispatch(receiveBookErrors(err.responseJSON)))
-);
+  }, err => dispatch(receiveBookErrors(err.responseJSON)));
+};
 
 export const destroyBook = (id) => dispatch => {
   return APIUtil.destroyBook(id).then(book => dispatch(deleteBook(book)));

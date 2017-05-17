@@ -1,6 +1,8 @@
 .books-index {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 .books-index ul {
@@ -12,7 +14,7 @@
   padding: 0;
   margin-left: 50px;
   margin-right: 50px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 @keyframes offpage {
@@ -38,4 +40,13 @@
 
 .books-index-picture:hover {
   transform: scale(1.1);
+}
+
+.new-book-button {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }

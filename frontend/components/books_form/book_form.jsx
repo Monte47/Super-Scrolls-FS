@@ -36,35 +36,39 @@ class BookForm extends React.Component {
   render() {
     return (
       <section className="create-book">
-        <ul>
-          {this.errors()}
-        </ul>
-        <form className="book-form" onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.title}
-            placeholder="Title"
-            onChange={this.update("title")}
-          />
-          <input
-            type="text"
-            value={this.state.author}
-            placeholder="Author"
-            onChange={this.update("author")}
-          />
-        <textarea
-          value={this.state.description}
-          onChange={this.update("description")}
-          placeholder="description">
-        </textarea>
-        <input
-          type="text"
-          value={this.state.image_url}
-          onChange={this.update("image_url")}
-          placeholder="image_url"
-        />
-        </form>
-        <button>Create Book</button>
+        <div className="book-form-box">
+          <h2>Create a New Book</h2>
+          <form className="book-form" onSubmit={this.handleSubmit}>
+            <ul className="errors-list">
+              {this.errors()}
+            </ul>
+            <input
+              type="text"
+              value={this.state.title}
+              placeholder="Title"
+              onChange={this.update("title")}
+              />
+            <input
+              type="text"
+              value={this.state.author}
+              placeholder="Author"
+              onChange={this.update("author")}
+              />
+            <h3>Synopsis:</h3>
+            <textarea
+              value={this.state.description}
+              onChange={this.update("description")}
+              placeholder="description">
+            </textarea>
+            <input
+              type="text"
+              value={this.state.image_url}
+              onChange={this.update("image_url")}
+              placeholder="image_url"
+              />
+            <button className="create-book-button">Create Book</button>
+          </form>
+        </div>
       </section>
     );
   }

@@ -1,0 +1,47 @@
+.create-book {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.book-form-box {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #984b43;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.book-form-box h2 {
+  font-family: Patua One;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-form input {
+  margin: 10px;
+}
+
+.create-book-button {
+  margin-top: 20px;
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}

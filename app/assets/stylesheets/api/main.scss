@@ -47,3 +47,30 @@ a:hover {
   color: white;
   cursor: pointer;
 }
+
+input {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  background-color: #18121E;
+  color: white;
+  border-style: none;
+  font-family: Comfortaa;
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  padding: 3px;
+}
+
+textarea {
+  display: flex;
+  width: 600px;
+  height: 200px;
+  resize: none;
+  font-family: Comfortaa;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 20px;
+}
