@@ -8,6 +8,10 @@ class BooksIndex extends React.Component {
     this.props.requestBooks();
   }
 
+  componentWillMount() {
+    this.props.requestBooks();
+  }
+
   render() {
     const { books } = this.props;
     return (
