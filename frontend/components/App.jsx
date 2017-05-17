@@ -6,13 +6,15 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './navbar/navbar_container';
 import BooksIndexContainer from './books_index/books_index_container';
 import BookDetailContainer from './books_show/book_detail_container';
+import BookFormContainer from './books_form/book_form_container';
 
 
 const App = () => (
   <div className="App">
     <Route path="/" component={NavBarContainer}/>
     <Route exact path="/" component={BooksIndexContainer}/>
-    <Route path="/books/:bookId" component={BookDetailContainer} />
+    <Route exact path="/books/:bookId" component={BookDetailContainer} />
+    <Route path="/book/new" component={BookFormContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>
