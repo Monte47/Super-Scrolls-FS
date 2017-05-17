@@ -27,17 +27,19 @@ class BookDetail extends React.Component {
           <figure>
             <img src={bookDetail.image_url} alt={bookDetail.name} />
           </figure>
-          <div className="book-details">
-            <div className="book-detail-headers">
-              <h2>{bookDetail.title}</h2>
-              <h3>{bookDetail.author}</h3>
+          <div className="right-book-detail">
+            <div className="book-details">
+              <div className="book-detail-headers">
+                <h2>{bookDetail.title}</h2>
+                <h3>{bookDetail.author}</h3>
+              </div>
+              <div className="book-description">
+                {bookDetail.description}
+              </div>
             </div>
-            <div className="book-description">
-              {bookDetail.description}
-            </div>
+            <button id="delete-book" onClick={this.handleDelete.bind(this)} type="button">Delete Book</button>
           </div>
         </div>
-        <button className="delete-book" onClick={this.handleDelete.bind(this)} type="button">Delete Book</button>
       </section>
     );
   }
