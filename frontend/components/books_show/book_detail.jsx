@@ -37,7 +37,12 @@ class BookDetail extends React.Component {
                 {bookDetail.description}
               </div>
             </div>
-            <button id="delete-book" onClick={this.handleDelete.bind(this)} type="button">Delete Book</button>
+            <div className="detail-buttons">
+              <Link to={`/books/${bookDetail.id}/edit`} >
+                <button id="edit-book" type="button">Edit Book</button>
+              </Link>
+              <button id="delete-book" onClick={this.handleDelete.bind(this)} type="button">Delete Book</button>
+            </div>
           </div>
         </div>
       </section>
