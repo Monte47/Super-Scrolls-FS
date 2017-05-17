@@ -27,7 +27,9 @@ class Navbar extends React.Component {
       return (
         <nav className='navbar'>
           <div className="LeftNav">
-            <span className="NavTitle">SuperScrolls</span>
+            <Link to="/">
+              <span id="nav-title">SuperScrolls</span>
+            </Link>
           </div>
           <div className="RightNav">
             <Link to="/login">

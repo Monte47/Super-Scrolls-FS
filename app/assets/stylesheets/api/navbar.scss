@@ -23,3 +23,13 @@
   align-items: center;
   padding-left: 20px;
 }
+
+#nav-title {
+  color: white;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+#nav-title:hover {
+  color: #eac67a;
+}
