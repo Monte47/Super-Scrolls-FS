@@ -1,0 +1,41 @@
+.books-index {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.books-index ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 40px;
+}
+
+@keyframes offpage {
+  0% {
+    filter: drop-shadow(0px 0px 0px black);
+    height: 500px;
+    width: 333px;
+    z-index: 1;
+  }
+  100% {
+    filter: drop-shadow(16px 16px 20px black);
+    height: 600px;
+    width: 400px;
+    z-index: 5;
+  }
+}
+
+.books-index-picture {
+  height: 500px;
+  width: 333px;
+  transition: all .2s ease-in-out;
+}
+
+.books-index-picture:hover {
+  transform: scale(1.1);
+}

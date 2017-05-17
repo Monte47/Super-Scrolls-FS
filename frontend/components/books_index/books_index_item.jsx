@@ -5,7 +5,7 @@ const BooksIndexItem = ({ book }) => (
   <li className="books-index-item">
     <figure>
       <Link to={`/books/${book.id}`}>
-        <img src={book.image_url} alt={book.title} />
+        <img className="books-index-picture" src={book.image_url} alt={book.title} />
       </Link>
     </figure>
   </li>
