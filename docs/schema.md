@@ -32,7 +32,6 @@ column name | data type | details
 id          | integer   | not null, primary key
 book_id     | integer   | not null, foreign key (references books), indexed
 bookshelf_id| integer   | not null, foreign key (references bookshelves), indexed
-<!-- read_status | string    | foreign key (references reads), indexed -->
 
 
 
