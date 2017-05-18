@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0;
   margin-left: 50px;
   margin-right: 50px;
@@ -21,10 +21,12 @@
   height: 500px;
   width: 333px;
   filter: blur(0px);
+  opacity: 1;
   transition: all .2s ease-in-out;
 }
 
 .books-index-picture:hover {
+  opacity: .5;
   transform: scale(1.1);
   filter: blur(5px);
 }
@@ -56,5 +58,5 @@
   right: 25%;
   font-family: Paytone One;
   text-align: center;
-  font: 10px;
+  font-size: 20px;
 }

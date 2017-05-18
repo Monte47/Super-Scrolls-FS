@@ -13,7 +13,7 @@ u1 = User.create(username: "Monte", password: "password")
 Book.destroy_all
 
 b1 = Book.create(title: "The Catcher in the Rye", author: "J.D. Salinger", description: "Holden wears a red hat.", image_url: "http://i.imgur.com/5gOuuxi.jpg")
-b2 = Book.create(title: "Do Androids Dream of Electric Sheep",
+b2 = Book.create(title: "Do Androids Dream of Electric Sheep?",
                 author: "Phillip K. Dick",
                 description: "In the futuristic year of 2019, Los Angeles has become a dark
                  and depressing metropolis, filled with urban decay. Rick Deckard, an ex-cop,

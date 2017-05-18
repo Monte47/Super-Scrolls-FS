@@ -23,11 +23,13 @@ button {
   border-radius: 25px 25px;
   align-self: center;
   -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  transition: all .2s ease-in-out;
 }
 
 button:hover {
-  background-color: #a38a55;
+  transform: scale(1.1);
+  text-transform: none;
+  background-color: #ebec86;
   cursor: pointer;
 }
 
