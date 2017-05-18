@@ -15,8 +15,8 @@ const App = () => (
     <Route path="/" component={NavBarContainer}/>
     <Route exact path="/" component={BooksIndexContainer}/>
     <Route exact path="/books/:bookId" component={BookDetailContainer} />
-    <Route path="/book/new" component={BookFormContainer} />
-    <Route exact path="/books/:bookId/edit" component={BookEditContainer} />
+    <ProtectedRoute path="/book/new" component={BookFormContainer} />
+    <ProtectedRoute exact path="/books/:bookId/edit" component={BookEditContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>

@@ -53,7 +53,7 @@ class EditBookForm extends React.Component {
     return (
       <section className="create-book">
         <div className="book-form-box">
-          <h2>Create a New Book</h2>
+          <h2>Edit:  {this.state.title}</h2>
           <form className="book-form" onSubmit={this.handleSubmit}>
             <input
               type="text"
@@ -75,7 +75,7 @@ class EditBookForm extends React.Component {
               value={this.state.image_url}
               onChange={this.update("image_url")}
               />
-            <button className="create-book-button">Create Book</button>
+            <button className="create-book-button">Update Book</button>
           </form>
         </div>
       </section>
