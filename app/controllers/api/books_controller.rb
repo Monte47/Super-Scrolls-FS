@@ -30,8 +30,12 @@ class Api::BooksController < ApplicationController
 
   def destroy
     @book = Book.find(params[:id])
-    @book.destroy
-    render :index
+
+    if @book.destroy
+      render :show
+    else
+      render json: @post.errors.full_messages, status: 422
+    end
   end
 
   def book_params

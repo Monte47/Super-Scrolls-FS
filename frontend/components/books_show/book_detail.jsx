@@ -15,8 +15,7 @@ class BookDetail extends React.Component {
 
   handleDelete(e) {
     e.preventDefault();
-    this.props.deleteBook(this.props.bookDetail.id);
-    this.props.history.goBack();
+    this.props.deleteBook(this.props.bookDetail.id).then(() => this.props.history.push("/"));
   }
 
   render() {

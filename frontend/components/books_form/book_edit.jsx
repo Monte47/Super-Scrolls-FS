@@ -35,7 +35,7 @@ class EditBookForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateBook(this.state).then(() => this.props.history.push(`/books/${this.state.id}`), (err => console.log(err.errors)));
+    this.props.updateBook(this.state).then(() => this.props.history.push(`/books/${this.state.id}`));
   }
 
   update(property) {

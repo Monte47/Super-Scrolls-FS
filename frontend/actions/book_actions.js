@@ -30,7 +30,7 @@ export const createBook = book => dispatch => {
 };
 
 export const destroyBook = (id) => dispatch => {
-  return APIUtil.destroyBook(id).then(book => dispatch(deleteBook(book)));
+  return APIUtil.destroyBook(id).then(book => dispatch(deleteBook(book)), () => console.log("error"));
 };
 
 export const updateBook = book => dispatch => {
