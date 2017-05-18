@@ -23,7 +23,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users), indexed
-title       | string    | not null
+name        | string    | not null
 
 
 ## shelvings
@@ -31,8 +31,8 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 book_id     | integer   | not null, foreign key (references books), indexed
-bookshelf_id| integer   | foreign key (references bookshelves), indexed
-read_status | string    | not null, foreign key (references default bookshelves), indexed
+bookshelf_id| integer   | not null, foreign key (references bookshelves), indexed
+<!-- read_status | string    | foreign key (references reads), indexed -->
 
 
 
