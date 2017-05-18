@@ -28,7 +28,7 @@ class Api::BookshelvesController < ApplicationController
   end
 
   def destroy
-    @bookshelf = Book.find(params[:id])
+    @bookshelf = Bookshelf.find(params[:id])
     if @bookshelf.destroy
       render :show
     else

@@ -30,12 +30,12 @@ class BookshelvesIndex extends React.Component {
   }
 
   render() {
-    const { bookshelves } = this.props;
+    const { bookshelves, deleteBookshelf } = this.props;
     return (
       <section className="bookshelves-index">
         <h1>Bookshelves Placeholder</h1>
         <ul>
-          {bookshelves.map(bookshelf => <BookshelvesIndexItem key={bookshelf.id} bookshelf={bookshelf} />)}
+          {bookshelves.map(bookshelf => <BookshelvesIndexItem key={bookshelf.id} bookshelf={bookshelf} deleteBookshelf={deleteBookshelf} />)}
         </ul>
         <form className="bookshelf-form" onSubmit={this.handleCreateBookshelf}>
           <input

@@ -28,9 +28,10 @@ export const patchBookshelf = (bookshelf) => (
   })
 );
 
-export const destroyBookshelf = (id) => (
-  $.ajax({
+export const destroyBookshelf = (id) => {
+  debugger;
+  return $.ajax({
     method: "DELETE",
     url: `api/bookshelves/${id}`
-  })
-);
+  });
+};
