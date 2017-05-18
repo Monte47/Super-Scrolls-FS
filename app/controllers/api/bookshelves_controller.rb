@@ -10,7 +10,7 @@ class Api::BookshelvesController < ApplicationController
   end
 
   def create
-    @bookshelf = Bookshelf.new(user_id: current_user.id, name: bookshelf_params.name)
+    @bookshelf = Bookshelf.new(user_id: current_user.id, name: bookshelf_params["name"])
     if @bookshelf.save
       render :show
     else

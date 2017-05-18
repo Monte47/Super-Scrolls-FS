@@ -19,6 +19,9 @@ class Navbar extends React.Component {
             <Link to="/">
               <span id="nav-title">SuperScrolls</span>
             </Link>
+            <Link to="/bookshelves">
+              <span id="my-books-nav-link">My Books</span>
+            </Link>
           </div>
           <div className="RightNav">
             <button onClick={this.handleLogout.bind(this)} type="button" className="Logout Button">Logout</button>

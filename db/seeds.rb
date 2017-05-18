@@ -9,6 +9,7 @@
 User.destroy_all
 
 u1 = User.create(username: "Monte", password: "password")
+u2 = User.create(username: "Kurt V.", password: "password")
 
 Book.destroy_all
 
@@ -66,7 +67,7 @@ b5 = Book.create(title: "Do Androids Dream of Electric Sheep? 2",
                  toward artificial intelligence makes him question his own identity in this future world, including
                  what's human and what's not human.",
                 image_url: "http://i.imgur.com/cfoTHi9.jpg")
-b6 = Book.create(title: "Dune 2",
+b6 = Book.create(title: "Dune 2: Dune Harder",
                 author: "Frank Herbert",
                 description: "In the year 10191, a spice called melange is the most valuable substance known in the
                 universe, and its only source is the desert planet Arrakis. A royal decree awards Arrakis
@@ -97,7 +98,7 @@ b8 = Book.create(title: "Do Androids Dream of Electric Sheep? 3",
                  toward artificial intelligence makes him question his own identity in this future world, including
                  what's human and what's not human.",
                 image_url: "http://i.imgur.com/cfoTHi9.jpg")
-b9 = Book.create(title: "Dune 3",
+b9 = Book.create(title: "Dune 3: Dune with a Vengeance",
                 author: "Frank Herbert",
                 description: "In the year 10191, a spice called melange is the most valuable substance known in the
                 universe, and its only source is the desert planet Arrakis. A royal decree awards Arrakis
@@ -105,3 +106,10 @@ b9 = Book.create(title: "Dune 3",
                 violently seize back their fiefdom, it is up to Paul, Leto's son, to lead the Fremen, the natives
                 of Arrakis, in a battle for control of the planet and its spice.",
                 image_url: "http://i.imgur.com/mzb4BrZ.jpg")
+
+Bookshelf.destroy_all
+
+bs1 = Bookshelf.create(name: "My favorites", user_id: u1.id)
+bs2 = Bookshelf.create(name: "Mom's favorites", user_id: u1.id)
+bs3 = Bookshelf.create(name: "Summertime Beach Books", user_id: u1.id)
+bs4 = Bookshelf.create(name: "Books I read in College", user_id: u2.id)

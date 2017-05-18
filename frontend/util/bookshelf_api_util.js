@@ -12,13 +12,13 @@ export const fetchBookshelf = (id) => (
   })
 );
 
-export const createBookshelf = (bookshelf) => (
-  $.ajax({
+export const createBookshelf = (bookshelf) => {
+  return $.ajax({
     method: "POST",
     url: 'api/bookshelves',
     data: { bookshelf }
-  })
-);
+  });
+};
 
 export const patchBookshelf = (bookshelf) => (
   $.ajax({
