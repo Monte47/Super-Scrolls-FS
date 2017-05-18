@@ -13,6 +13,7 @@ export default (state = defaultBook, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_BOOK:
+      return merge({}, action.book);
     case RECEIVE_NEW_BOOK:
       return merge({}, action.book);
     default:

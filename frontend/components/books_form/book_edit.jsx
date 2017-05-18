@@ -15,11 +15,21 @@ class EditBookForm extends React.Component {
   }
 
   componentWillMount() {
-    this.props.requestBooks();
+    this.props.requestBook(this.state.id);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.book) {
+      this.setState({
+          title: nextProps.book.title,
+          author: nextProps.book.author,
+          description: nextProps.book.description,
+          image_url: nextProps.book.image_url
+      });
+    }
   }
 
   handleSubmit(e) {
-    debugger
     e.preventDefault();
     this.props.updateBook(this.state)
     .then(this.props.history.push(`/books/${this.state.id}`));
@@ -48,26 +58,22 @@ class EditBookForm extends React.Component {
             <input
               type="text"
               value={this.state.title}
-              placeholder="Title"
               onChange={this.update("title")}
               />
             <input
               type="text"
               value={this.state.author}
-              placeholder="Author"
               onChange={this.update("author")}
               />
             <h3>Synopsis:</h3>
             <textarea
               value={this.state.description}
-              onChange={this.update("description")}
-              placeholder="description">
+              onChange={this.update("description")}>
             </textarea>
             <input
               type="text"
               value={this.state.image_url}
               onChange={this.update("image_url")}
-              placeholder="image_url"
               />
             <button className="create-book-button">Create Book</button>
           </form>
