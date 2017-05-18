@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import EditBookForm from './book_edit';
-import { updateBook, requestBook, receiveErrors, clearBookErrors } from '../../actions/book_actions';
+import { updateBook, requestBook, clearBookErrors } from '../../actions/book_actions';
 import { selectBook } from '../../reducers/selectors';
 
 const mapStateToProps = (state, { match } ) => ({
@@ -11,7 +11,7 @@ const mapStateToProps = (state, { match } ) => ({
 const mapDispatchToProps = dispatch => ({
   updateBook: book => dispatch(updateBook(book)),
   requestBook: (book) => dispatch(requestBook(book)),
-  clearErrors: errors => dispatch(clearBookErrors(errors))
+  clearErrors: errors => dispatch(clearBookErrors(errors)),
 });
 
 export default connect(

@@ -18,6 +18,10 @@ class EditBookForm extends React.Component {
     this.props.requestBook(this.state.id);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.book) {
       this.setState({
@@ -31,8 +35,7 @@ class EditBookForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateBook(this.state)
-    .then(this.props.history.push(`/books/${this.state.id}`));
+    this.props.updateBook(this.state).then(() => this.props.history.push(`/books/${this.state.id}`), (err => console.log(err.errors)));
   }
 
   update(property) {
@@ -55,6 +58,9 @@ class EditBookForm extends React.Component {
         <div className="book-form-box">
           <h2>Edit:  {this.state.title}</h2>
           <form className="book-form" onSubmit={this.handleSubmit}>
+            <ul className="errors-list">
+              {this.errors()}
+            </ul>
             <input
               type="text"
               value={this.state.title}

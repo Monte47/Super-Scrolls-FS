@@ -1,5 +1,4 @@
 import { RECEIVE_BOOK_ERRORS, CLEAR_BOOK_ERRORS } from '../actions/book_actions';
-import { RECEIVE_ERRORS } from '../actions/session_actions';
 
 const ErrorsReducer = (state = [], action) => {
   Object.freeze(state);
