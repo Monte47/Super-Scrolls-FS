@@ -17,29 +17,16 @@
   margin-top: 20px;
 }
 
-@keyframes offpage {
-  0% {
-    filter: drop-shadow(0px 0px 0px black);
-    height: 500px;
-    width: 333px;
-    z-index: 1;
-  }
-  100% {
-    filter: drop-shadow(16px 16px 20px black);
-    height: 600px;
-    width: 400px;
-    z-index: 5;
-  }
-}
-
 .books-index-picture {
   height: 500px;
   width: 333px;
+  filter: blur(0px);
   transition: all .2s ease-in-out;
 }
 
 .books-index-picture:hover {
   transform: scale(1.1);
+  filter: blur(5px);
 }
 
 .new-book-button {
@@ -49,4 +36,25 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
+}
+
+.book-index-item-figure {
+  position: relative;
+  :hover {
+    .book-index-item-title {
+      opacity: 1;
+    }
+  }
+}
+
+.book-index-item-title {
+  opacity: 0;
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  right: 25%;
+  font-family: Paytone One;
+  text-align: center;
+  font: 10px;
 }
