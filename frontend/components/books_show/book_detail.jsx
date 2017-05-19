@@ -2,6 +2,10 @@ import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 
 class BookDetail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.renderBookshelves = this.renderBookshelves.bind(this);
+  }
 
   componentDidMount() {
     this.props.requestBook(this.props.match.params.bookId);
@@ -18,6 +22,24 @@ class BookDetail extends React.Component {
     this.props.deleteBook(this.props.bookDetail.id).then(() => this.props.history.push("/"));
   }
 
+  renderBookshelves() {
+    const { bookshelves } = this.props;
+    if(bookshelves.length > 0) {
+      return (
+        <form className="book-show-bookshelf-forms">
+          <select>
+            {bookshelves.map(bookshelf => <option key={bookshelf.id}>{bookshelf.name}</option>)}
+          </select>
+          <button id="show-add-to-bookshelf-button">Add to Shelf</button>
+        </form>
+      );
+    } else {
+      return (
+        <div></div>
+      );
+    }
+  }
+
   render() {
     const { bookDetail } = this.props;
     return (
@@ -29,6 +51,7 @@ class BookDetail extends React.Component {
           <div className="right-book-detail">
             <div className="book-details">
               <div className="book-detail-headers">
+                {this.renderBookshelves()}
                 <h2>{bookDetail.title}</h2>
                 <h3>{bookDetail.author}</h3>
               </div>

@@ -3,7 +3,8 @@ import BookDetail from './book_detail';
 import { requestBook, destroyBook } from '../../actions/book_actions';
 
 const mapStateToProps = (state) => ({
-  bookDetail: state.bookDetail
+  bookDetail: state.bookDetail,
+  bookshelves: state.session.bookshelves
 });
 
 const mapDispatchToProps = dispatch => ({
