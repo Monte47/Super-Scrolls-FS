@@ -23,14 +23,14 @@ button {
   width: 100px;
   border-radius: 25px 25px;
   align-self: center;
-  -webkit-transition-duration: 0.4s;
-  transition: all .2s ease-in-out;
+  -webkit-transition-duration: 0.1s;
+  transition: all .1s ease-in-out;
 }
 
 button:hover {
   transform: scale(1.1);
   text-transform: none;
-  background-color: #ebec86;
+  background-color: #a38a55;
   cursor: pointer;
 }
 
@@ -42,8 +42,8 @@ a {
   text-decoration: none;
   padding: 5px;
   color: black;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
 }
 
 a:hover {
