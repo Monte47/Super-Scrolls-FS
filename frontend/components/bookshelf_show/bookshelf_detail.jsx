@@ -21,19 +21,29 @@ class BookshelfDetail extends React.Component {
 
   render() {
     const { bookshelfDetail, books } = this.props;
-    return (
-      <section className="bookshelf-detail">
-        <h2 onClick={this.handleDebugger.bind(this)}>{bookshelfDetail.name}</h2>
-        <ul className="bookshelf-books-list">
-          <li className="bookshelf-list-header">
+    if (books) {
+      return (
+        <section className="bookshelf-detail">
+          <div className="bookshelf-list-header">
             <h3>Title</h3>
             <h3>Author</h3>
-          </li>
-          {books.map(book => <BookshelfDetailItem key={book.id} book={book} />)}
-        </ul>
-      </section>
+          </div>
+          <ul className="bookshelf-books-list">
+            {books.map(book => <BookshelfDetailItem key={book.id} book={book} />)}
+          </ul>
+        </section>
 
-    );
+      );
+    } else {
+      return (
+        <section className="bookshelf-detail">
+          <div className="bookshelf-list-header">
+            <h3>Title</h3>
+            <h3>Author</h3>
+          </div>
+        </section>
+      );
+    }
   }
 
 }

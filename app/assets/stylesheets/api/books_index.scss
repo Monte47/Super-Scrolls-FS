@@ -17,21 +17,6 @@
   margin-top: 20px;
 }
 
-.books-index-picture {
-  height: 500px;
-  width: 333px;
-  filter: blur(0px);
-  opacity: 1;
-  transition: all .2s ease-in-out;
-  border-radius: 10px;
-}
-
-.books-index-picture:hover {
-  opacity: .5;
-  transform: scale(1.1);
-  filter: blur(5px);
-}
-
 .new-book-button {
   height: auto;
   width: auto;
@@ -43,24 +28,36 @@
 
 .book-index-item-figure {
   position: relative;
+  .books-index-picture {
+    height: 500px;
+    width: 333px;
+    filter: blur(0px);
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+  }
+  .book-index-item-title {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    right: 25%;
+    font-family: Paytone One;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: #000 3px 3px 3px;
+  }
   :hover {
     .book-index-item-title {
       opacity: 1;
     }
+    .books-index-picture {
+      opacity: .5;
+      transform: scale(1.1);
+      filter: blur(5px);
+    }
   }
-}
-
-.book-index-item-title {
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  color: white;
-  position: absolute;
-  top: 5%;
-  left: 25%;
-  right: 25%;
-  font-family: Paytone One;
-  text-align: center;
-  font-size: 40px;
-  text-shadow: #000 3px 3px 3px;
 }

@@ -1,0 +1,53 @@
+@import "colors";
+
+.bookshelf-detail {
+  display: flex;
+  flex-direction: column;
+  background-color: $third;
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  width: 65%;
+
+
+  .bookshelf-list-header {
+    display: flex;
+    background-color: $fourth;
+    h3 {
+      margin-left: 20%;
+      font-family: PayTone One;
+      font-size: 30px;
+      padding: 20px;
+    }
+  }
+
+  .bookshelf-books-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+.bookshelf-books-list-item {
+  display: flex;
+  padding: 30px;
+}
+
+.bookshelf-list-item-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    margin: 20%;
+  }
+
+  h3 {
+    padding-left: 20%;
+  }
+}
+
+
+.bookshelf-list-item-cover {
+  height: 150px;
+}

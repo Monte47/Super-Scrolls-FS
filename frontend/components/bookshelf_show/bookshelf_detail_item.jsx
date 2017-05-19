@@ -12,7 +12,6 @@ class BookshelfDetailItem extends React.Component {
     const { book } = this.props;
     return (
       <li className="bookshelf-books-list-item">
-        <h1 onClick={this.handleDebugger.bind(this)}>debugg me</h1>
         <img className="bookshelf-list-item-cover" src={book.image_url} alt={book.title} />
         <div className="bookshelf-list-item-details">
           <h2>{book.title}</h2>

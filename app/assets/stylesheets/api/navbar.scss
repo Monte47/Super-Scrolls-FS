@@ -25,16 +25,8 @@
   font-size: 30px;
   align-items: center;
   padding-left: 20px;
-}
 
-#nav-title {
-  color: white;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-}
 
-#nav-title:hover {
-  color: $third;
 }
 
 #my-books-nav-link {
@@ -46,4 +38,21 @@
 
 #my-books-nav-link:hover {
   color: $third;
+}
+
+#index-route {
+  #nav-title {
+    color: white;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+  }
+}
+
+#index-route:hover {
+  #nav-title {
+    color: $third;
+  }
+  #book-logo {
+    color: $third;
+  }
 }
