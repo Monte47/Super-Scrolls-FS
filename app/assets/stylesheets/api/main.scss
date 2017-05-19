@@ -77,3 +77,11 @@ textarea {
   padding: 5px;
   margin-bottom: 20px;
 }
+
+#book-logo {
+  color: white;
+  margin-right: 10px;
+  &:hover {
+    color: #a38a55
+  }
+}
