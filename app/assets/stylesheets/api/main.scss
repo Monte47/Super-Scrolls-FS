@@ -1,10 +1,12 @@
+@import "colors";
+
 
 body {
   margin: 0px;
 }
 
 #root {
-  background-color: #233237;
+  background-color: $fifth;
   font-family: Comfortaa;
 }
 
@@ -12,7 +14,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eac67a;
+  background-color: $fourth;
   border: none;
   color: back;
   padding: 15px;
@@ -82,6 +84,6 @@ textarea {
   color: white;
   margin-right: 10px;
   &:hover {
-    color: #a38a55
+    color: $third;
   }
 }

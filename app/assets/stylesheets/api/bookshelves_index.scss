@@ -1,3 +1,5 @@
+@import "colors";
+
 
 .bookshelves-page {
   height: 100vh;
@@ -5,7 +7,7 @@
 }
 
 .bookshelves-index {
-  background-color: #984b43;
+  background-color: $second;
   display: flex;
   flex-direction: column;
   width: 20vw;

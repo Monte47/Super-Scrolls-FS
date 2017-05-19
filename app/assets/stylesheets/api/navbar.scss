@@ -1,3 +1,5 @@
+@import "colors";
+
 
 .navbar {
   display: flex;
@@ -5,7 +7,7 @@
   padding-top: 20px;
   padding-bottom: 30px;
   justify-content: space-between;
-  background-color: #18121E;
+  background-color: $first;
   color: white;
   height: 8vh;
 }
@@ -32,7 +34,7 @@
 }
 
 #nav-title:hover {
-  color: #eac67a;
+  color: $third;
 }
 
 #my-books-nav-link {
@@ -43,5 +45,5 @@
 }
 
 #my-books-nav-link:hover {
-  color: #eac67a;
+  color: $third;
 }

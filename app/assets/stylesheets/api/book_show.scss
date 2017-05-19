@@ -1,3 +1,5 @@
+@import "colors";
+
 .book-show {
   display: flex;
   justify-content: center;
@@ -17,7 +19,7 @@
   flex-direction: column;
   border-style: none;
   border-radius: 10px;
-  background-color: #984b43;
+  background-color: $second;
 }
 
 .right-book-detail {
