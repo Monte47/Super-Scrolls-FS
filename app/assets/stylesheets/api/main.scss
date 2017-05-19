@@ -1,6 +1,11 @@
 @import "colors";
 
 
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   margin: 0px;
 }

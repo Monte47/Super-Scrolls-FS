@@ -20,7 +20,6 @@ const App = () => (
     <ProtectedRoute path="/book/new" component={BookFormContainer} />
     <ProtectedRoute exact path="/books/:bookId/edit" component={BookEditContainer} />
     <ProtectedRoute path="/bookshelves" component={BookshelvesIndexContainer} />
-    <ProtectedRoute path="/bookshelves/:bookshelfId" component={BookshelfDetailContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>

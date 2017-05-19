@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import BookshelvesIndexItem from './bookshelves_index_item';
+import BookshelfDetailContainer from '../bookshelf_show/bookshelf_detail_container';
 
 class BookshelvesIndex extends React.Component {
   constructor(props) {
@@ -62,6 +63,7 @@ class BookshelvesIndex extends React.Component {
             <button id="create-bookshelf-button">New Bookshelf</button>
           </form>
         </section>
+        <Route path="/bookshelves/:bookshelfId" component={BookshelfDetailContainer} />
       </div>
     );
   }
