@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import BookDetail from './book_detail';
 import { requestBook, destroyBook } from '../../actions/book_actions';
 
-const mapStateToProps = ({ bookDetail }) => ({
-  bookDetail
+const mapStateToProps = (state) => ({
+  bookDetail: state.bookDetail
 });
 
 const mapDispatchToProps = dispatch => ({
