@@ -13,7 +13,7 @@ class BookshelvesIndexItem extends React.Component {
     return (
       <li className="bookshelf-index-item">
         <h3 className="booshelf-index-item-title">{bookshelf.name}</h3>
-        <i id="delete-bookshelf-button" className="fa fa-times fa-2" onClick={this.handleDelete.bind(this)}></i>
+        <i id="delete-bookshelf-button" className="fa fa-times fa-5" onClick={this.handleDelete.bind(this)}></i>
       </li>
     );
   }

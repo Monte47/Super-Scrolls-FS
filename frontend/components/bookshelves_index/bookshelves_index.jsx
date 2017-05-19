@@ -14,6 +14,7 @@ class BookshelvesIndex extends React.Component {
 
   componentDidMount() {
     this.props.requestBookshelves();
+    this.props.clearErrors();
   }
 
   componentWillMount() {
@@ -43,22 +44,25 @@ class BookshelvesIndex extends React.Component {
   render() {
     const { bookshelves, deleteBookshelf } = this.props;
     return (
-      <section className="bookshelves-index">
-        <h2>Bookshelves Placeholder</h2>
-        <ul className="bookshelves-list">
-          {bookshelves.map(bookshelf => <BookshelvesIndexItem key={bookshelf.id} bookshelf={bookshelf} deleteBookshelf={deleteBookshelf} />)}
-        </ul>
-        <form className="bookshelf-form" onSubmit={this.handleCreateBookshelf}>
-          {this.errors()}
-          <input
-            type="text"
-            value={this.state.name}
-            placeholder="Name"
-            onChange={this.update("name")}
-            />
-          <button id="create-bookshelf-button">New Bookshelf</button>
-        </form>
-      </section>
+      <div className="bookshelves-page">
+        <section className="bookshelves-index">
+          <h2>Bookshelves</h2>
+          <ul className="bookshelves-list">
+            {bookshelves.map(bookshelf => <BookshelvesIndexItem key={bookshelf.id} bookshelf={bookshelf} deleteBookshelf={deleteBookshelf} />)}
+          </ul>
+          <form className="bookshelf-form" onSubmit={this.handleCreateBookshelf}>
+            {this.errors()}
+            <input
+              id="bookshelf-name-field"
+              type="text"
+              value={this.state.name}
+              placeholder="Name"
+              onChange={this.update("name")}
+              />
+            <button id="create-bookshelf-button">New Bookshelf</button>
+          </form>
+        </section>
+      </div>
     );
   }
 
