@@ -149,3 +149,5 @@ bs1 = Bookshelf.create(name: "My favorites", user_id: u1.id)
 bs2 = Bookshelf.create(name: "Mom's favorites", user_id: u1.id)
 bs3 = Bookshelf.create(name: "Summertime Beach Books", user_id: u1.id)
 bs4 = Bookshelf.create(name: "Books I read in College", user_id: u2.id)
+
+s1 = Shelving.create(book_id: b26.id, bookshelf_id: bs3.id)

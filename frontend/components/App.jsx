@@ -9,6 +9,7 @@ import BookDetailContainer from './books_show/book_detail_container';
 import BookFormContainer from './books_form/book_form_container';
 import BookEditContainer from './books_form/book_edit_container';
 import BookshelvesIndexContainer from './bookshelves_index/bookshelves_index_container';
+import BookshelfDetailContainer from './bookshelf_show/bookshelf_detail_container';
 
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
     <ProtectedRoute path="/book/new" component={BookFormContainer} />
     <ProtectedRoute exact path="/books/:bookId/edit" component={BookEditContainer} />
     <ProtectedRoute path="/bookshelves" component={BookshelvesIndexContainer} />
+    <ProtectedRoute path="/bookshelves/:bookshelfId" component={BookshelfDetailContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>

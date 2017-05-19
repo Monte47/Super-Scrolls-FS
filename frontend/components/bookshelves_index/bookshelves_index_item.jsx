@@ -12,7 +12,9 @@ class BookshelvesIndexItem extends React.Component {
     const { bookshelf, deleteBookshelf } = this.props;
     return (
       <li className="bookshelf-index-item">
-        <h3 className="booshelf-index-item-title">{bookshelf.name}</h3>
+        <Link to={`bookshelves/${bookshelf.id}`}>
+          <h3 className="booshelf-index-item-title">{bookshelf.name}</h3>
+        </Link>
         <i id="delete-bookshelf-button" className="fa fa-times fa-5" onClick={this.handleDelete.bind(this)}></i>
       </li>
     );

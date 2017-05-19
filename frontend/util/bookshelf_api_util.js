@@ -5,12 +5,12 @@ export const fetchBookshelves = () => (
   })
 );
 
-export const fetchBookshelf = (id) => (
-  $.ajax({
+export const fetchBookshelf = (id) => {
+  return $.ajax({
     method: "GET",
     url: `api/bookshelves/${id}`
-  })
-);
+  });
+};
 
 export const createBookshelf = (bookshelf) => {
   return $.ajax({
