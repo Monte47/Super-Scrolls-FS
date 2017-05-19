@@ -4,7 +4,6 @@ import { Route, Link, withRouter } from 'react-router-dom';
 class BookshelvesIndexItem extends React.Component {
 
   handleDelete(e) {
-    debugger
     e.preventDefault();
     this.props.deleteBookshelf(this.props.bookshelf.id);
   }

@@ -20,13 +20,24 @@ class BookshelvesIndex extends React.Component {
       this.props.requestBookshelves();
   }
 
+
   handleCreateBookshelf(e) {
     e.preventDefault();
-    this.props.createBookshelf(this.state);
+    this.props.createBookshelf(this.state).then(() => this.setState({ name: ""}));
   }
 
   update(property) {
     return e => this.setState({ [property]: e.target.value });
+  }
+
+  errors() {
+    return (
+      <ul className="errors-list">
+        {this.props.errors.map((error, i) => {
+          return (<li className="error" key={i}>{error}</li>);
+        })}
+      </ul>
+    );
   }
 
   render() {
@@ -38,6 +49,7 @@ class BookshelvesIndex extends React.Component {
           {bookshelves.map(bookshelf => <BookshelvesIndexItem key={bookshelf.id} bookshelf={bookshelf} deleteBookshelf={deleteBookshelf} />)}
         </ul>
         <form className="bookshelf-form" onSubmit={this.handleCreateBookshelf}>
+          {this.errors()}
           <input
             type="text"
             value={this.state.name}

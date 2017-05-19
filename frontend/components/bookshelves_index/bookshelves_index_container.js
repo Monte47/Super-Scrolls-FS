@@ -3,8 +3,9 @@ import BookshelvesIndex from './bookshelves_index';
 import { requestBookshelves, createBookshelf, destroyBookshelf } from '../../actions/bookshelf_actions';
 import { selectBookshelves } from '../../reducers/selectors';
 
-const mapStateToProps = state => ({
-  bookshelves: selectBookshelves(state)
+const mapStateToProps = (state) => ({
+  bookshelves: selectBookshelves(state),
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({
