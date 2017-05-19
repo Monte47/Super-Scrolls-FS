@@ -13,7 +13,7 @@ class BookshelfDetailItem extends React.Component {
     return (
       <li className="bookshelf-books-list-item">
         <img className="bookshelf-list-item-cover" src={book.image_url} alt={book.title} />
-        <div className="bookshelf-list-item-details">
+        <div className="bookshelf-list-item-details" onClick={this.handleDebugger.bind(this)}>
           <h2>{book.title}</h2>
           <h3>{book.author}</h3>
         </div>

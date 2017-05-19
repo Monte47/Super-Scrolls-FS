@@ -36,8 +36,10 @@ class Navbar extends React.Component {
         <nav className='navbar'>
           <div className="LeftNav">
             <Link to="/">
-              <i id="book-logo" className="fa fa-book" aria-hidden="true"></i>
-              <span id="nav-title">SuperScrolls</span>
+              <div id="index-route">
+                <i id="book-logo" className="fa fa-book" aria-hidden="true"></i>
+                <span id="nav-title">SuperScrolls</span>
+              </div>
             </Link>
           </div>
           <div className="RightNav">

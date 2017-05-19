@@ -9,6 +9,7 @@ class Api::ShelvingsController < ApplicationController
   end
 
   def shelving_params
-    
+
   end
+  
 end
