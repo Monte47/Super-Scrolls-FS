@@ -1,5 +1,4 @@
 export const createShelving = (shelving) => {
-  debugger;
   return $.ajax({
     method: "POST",
     url: 'api/shelvings',

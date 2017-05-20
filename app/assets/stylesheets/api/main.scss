@@ -30,15 +30,17 @@ button {
   width: 100px;
   border-radius: 25px 25px;
   align-self: center;
-  -webkit-transition-duration: 0.1s;
-  transition: all .1s ease-in-out;
+  box-shadow: 3px 5px #5e4211;
 }
 
 button:hover {
-  transform: scale(1.1);
-  text-transform: none;
-  background-color: #a38a55;
+  background-color: #bc8523;
   cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0 5px #5e4211;
+  transform: translateY(3px) translateX(2px);
 }
 
 button:focus {

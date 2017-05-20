@@ -2,7 +2,6 @@ class Api::ShelvingsController < ApplicationController
 
   def create
     @shelving = Shelving.new(shelving_params)
-    debugger
     if @shelving.save
       @book = Book.find(params[:shelve][:book_id])
       render 'api/books/show'
