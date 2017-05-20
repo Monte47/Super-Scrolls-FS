@@ -4,6 +4,7 @@
 // export const DELETE_SHELVING = "DELETE_SHELVING";
 
 import * as APIUtil from '../util/shelving_api_util';
+import { requestBookshelf } from './bookshelf_actions';
 
 // export const requestShelvings = () => dispatch => {
 //   return APIUtil.fetchShelvings().then(shelvings => receiveShelvings(shelvings));
@@ -18,7 +19,7 @@ export const createShelving = shelving => dispatch => {
 };
 
 export const destroyShelving = shelving => dispatch => {
-  return APIUtil.destroyShelving(shelving);
+  return APIUtil.destroyShelving(shelving).then(({bookshelf_id}) => dispatch(requestBookshelf(bookshelf_id)));
 };
 
 // export const receiveShelvings = shelvings => ({

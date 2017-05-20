@@ -21,7 +21,6 @@ export const createShelving = (shelving) => {
 };
 
 export const destroyShelving = (shelving) => {
-  debugger
   return $.ajax({
     method: "DELETE",
     url: 'api/shelvings/',
