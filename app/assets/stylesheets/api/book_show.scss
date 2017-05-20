@@ -99,4 +99,9 @@ select {
    font-size: 16px;
    padding: 5px;
    height: 30px;
+   cursor: pointer;
+}
+
+select:hover {
+  background-color: #3f403f;
 }

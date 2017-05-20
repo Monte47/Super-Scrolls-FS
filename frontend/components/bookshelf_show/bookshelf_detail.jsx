@@ -20,7 +20,7 @@ class BookshelfDetail extends React.Component {
   }
 
   render() {
-    const { bookshelfDetail, books } = this.props;
+    const { bookshelfDetail, books, deleteShelving } = this.props;
     if (books) {
       return (
         <section className="bookshelf-detail">
@@ -29,7 +29,7 @@ class BookshelfDetail extends React.Component {
             <h3>Author</h3>
           </div>
           <ul className="bookshelf-books-list">
-            {books.map(book => <BookshelfDetailItem key={book.id} book={book} />)}
+            {books.map(book => <BookshelfDetailItem key={book.id} book={book} deleteShelving={deleteShelving}/>)}
           </ul>
         </section>
 
