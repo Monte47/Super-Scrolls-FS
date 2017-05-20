@@ -26,8 +26,9 @@ class BookDetail extends React.Component {
     const { bookshelves } = this.props;
     if(bookshelves.length > 0) {
       return (
-        <form className="book-show-bookshelf-forms">
+        <form className="book-show-bookshelf-form">
           <select>
+            <option selected disabled>Bookshelf</option>
             {bookshelves.map(bookshelf => <option key={bookshelf.id}>{bookshelf.name}</option>)}
           </select>
           <button id="show-add-to-bookshelf-button">Add to Shelf</button>
