@@ -1,6 +1,6 @@
 import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, CLEAR_SESSION_ERRORS } from '../actions/session_actions';
 
-const _nullUser = { currentUser: null, errors: [], bookshelves: [] };
+const _nullUser = { currentUser: null, errors: [], bookshelves: [], shelvings: [] };
 
 const SessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
@@ -10,13 +10,15 @@ const SessionReducer = (state = _nullUser, action) => {
         return {
           currentUser: action.currentUser,
           errors: [],
-          bookshelves: action.currentUser.bookshelves
+          bookshelves: action.currentUser.bookshelves,
+          shelvings: action.currentUser.shelvings
         };
       } else {
         return {
           currentUser: action.currentUser,
           errors: [],
-          bookshelves: []
+          bookshelves: [],
+          shelvings: []
         };
       }
     case RECEIVE_ERRORS:

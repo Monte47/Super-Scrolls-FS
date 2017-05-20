@@ -29,7 +29,7 @@ class BookshelfDetail extends React.Component {
             <h3>Author</h3>
           </div>
           <ul className="bookshelf-books-list">
-            {books.map(book => <BookshelfDetailItem key={book.id} book={book} deleteShelving={deleteShelving}/>)}
+            {books.map(book => <BookshelfDetailItem key={book.id} book={book} bookshelfId={bookshelfDetail.id} deleteShelving={deleteShelving} />)}
           </ul>
         </section>
 
