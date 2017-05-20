@@ -5,6 +5,12 @@ class BookDetail extends React.Component {
   constructor(props) {
     super(props);
     this.renderBookshelves = this.renderBookshelves.bind(this);
+    this.handleCreateShelving = this.handleCreateShelving.bind(this);
+    this.update = this.update.bind(this);
+    this.state = {
+      book_id: 0,
+      bookshelf_id: 0
+    };
   }
 
   componentDidMount() {
@@ -22,14 +28,29 @@ class BookDetail extends React.Component {
     this.props.deleteBook(this.props.bookDetail.id).then(() => this.props.history.push("/"));
   }
 
+  handleCreateShelving(e) {
+    e.preventDefault();
+    this.setState({book_id: this.props.bookDetail.id}, function() {
+      this.props.createShelving(this.state);
+    });
+  }
+
+  update(property) {
+    return e => {
+      e.preventDefault();
+      this.setState({ [property]: parseInt(e.target.value)});
+    };
+
+  }
+
   renderBookshelves() {
     const { bookshelves } = this.props;
     if(bookshelves.length > 0) {
       return (
-        <form className="book-show-bookshelf-form">
-          <select>
-            <option selected disabled>Bookshelf</option>
-            {bookshelves.map(bookshelf => <option key={bookshelf.id}>{bookshelf.name}</option>)}
+        <form className="book-show-bookshelf-form" onSubmit={this.handleCreateShelving}>
+          <select onChange={this.update("bookshelf_id")} defaultValue="Bookshelf">
+            <option defaultValue disabled>Bookshelf</option>
+            {bookshelves.map(bookshelf => <option key={bookshelf.id} value={bookshelf.id}>{bookshelf.name}</option>)}
           </select>
           <button id="show-add-to-bookshelf-button">Add to Shelf</button>
         </form>
