@@ -3,8 +3,7 @@ class Api::ShelvingsController < ApplicationController
   def create
     @shelving = Shelving.new(shelving_params)
     if @shelving.save
-      @book = Book.find(params[:shelve][:book_id])
-      render 'api/books/show'
+      render json: @shelving
     else
       render json: @shelving.errors.full_messages, status: 422
     end

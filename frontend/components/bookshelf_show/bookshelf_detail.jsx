@@ -21,7 +21,7 @@ class BookshelfDetail extends React.Component {
 
   render() {
     const { bookshelfDetail, books, deleteShelving } = this.props;
-    if (books) {
+    if (books.length > 0) {
       return (
         <section className="bookshelf-detail">
           <div className="bookshelf-list-header">
@@ -41,6 +41,7 @@ class BookshelfDetail extends React.Component {
             <h3>Title</h3>
             <h3>Author</h3>
           </div>
+          <img src="http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495326388/cobwebs_vjq9xl.png" />
         </section>
       );
     }
