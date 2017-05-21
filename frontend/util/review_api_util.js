@@ -9,7 +9,8 @@ export const fectchReviews = (book_id) => (
 export const createReview = review => {
   return $.ajax({
     method: "POST",
-    url: 'api/reviews'
+    url: 'api/reviews',
+    data: { review }
   });
 };
 

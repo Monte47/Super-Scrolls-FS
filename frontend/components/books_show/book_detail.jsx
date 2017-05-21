@@ -93,7 +93,7 @@ class BookDetail extends React.Component {
           </div>
         </div>
         <section className="reviews-section">
-          <ReviewsIndexContainer />
+          <ReviewsIndexContainer bookId={bookDetail.id}/>
         </section>
       </section>
     );

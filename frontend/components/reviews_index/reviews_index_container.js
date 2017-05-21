@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
 import ReviewsIndex from './reviews_index';
-import { requestReviews, destroyReview } from '../../actions/review_actions';
+import { requestReviews, destroyReview, createReview } from '../../actions/review_actions';
 import { selectReviews } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
-  reviews: selectReviews(state)
+  reviews: selectReviews(state),
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
   requestReviews: book_id => dispatch(requestReviews(book_id)),
-  deleteReview: id => dispatch(destroyReview(id))
+  deleteReview: id => dispatch(destroyReview(id)),
+  createReview: review => dispatch(createReview(review))
 });
 
 export default connect(
