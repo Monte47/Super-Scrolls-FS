@@ -18,16 +18,11 @@ class ReviewsIndex extends React.Component {
     }
   }
 
-  handleDebugger(e) {
-    e.preventDefault();
-    debugger;
-  }
-
   render() {
     const { reviews, deleteReview } = this.props;
     return (
       <section className="reviews-index">
-        <h3 onClick={this.handleDebugger.bind(this)}>Reviews</h3>
+        <h3>Reviews</h3>
         <ul>
           {reviews.map(review => <ReviewsIndexItem key={review.id} review={review} deleteReview={deleteReview} />)}
         </ul>

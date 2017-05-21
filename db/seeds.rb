@@ -10,6 +10,16 @@ User.destroy_all
 
 u1 = User.create(username: "Monte", password: "password")
 u2 = User.create(username: "Kurt V.", password: "password")
+u3 = User.create(username: "Ernest H.", password: "password")
+u4 = User.create(username: "Mark T.", password: "password")
+u5 = User.create(username: "Steve K.", password: "password")
+u6 = User.create(username: "Will S.", password: "password")
+u7 = User.create(username: "James J", password: "password")
+u8 = User.create(username: "Oscar W.", password: "password")
+u9 = User.create(username: "Jane A", password: "password")
+u10 = User.create(username: "Sylvia P", password: "password")
+u11 = User.create(username: "Agatha C.", password: "password")
+u12 = User.create(username: "Leo T.", password: "password")
 
 Book.destroy_all
 
@@ -141,6 +151,54 @@ b27 = Book.create(title: "Snow Crash",
                   author: "Neal Stephenson",
                   description: "In reality, Hiro Protagonist delivers pizza for Uncle Enzo’s CosoNostra Pizza Inc., but in the Metaverse he’s a warrior prince. Plunging headlong into the enigma of a new computer virus that’s striking down hackers everywhere, he races along the neon-lit streets on a search-and-destroy mission for the shadowy virtual villain threatening to bring about infocalypse. Snow Crash is a mind-altering romp through a future America so bizarre, so outrageous…you’ll recognize it immediately.",
                   image_url: "http://i.imgur.com/C1srCsH.jpg")
+b28 = Book.create(title: "The Adventures of Huckleberry Finn",
+                  author: "Mark Twain",
+                  description: "Of all the contenders for the title of The Great American Novel, none has a better claim than The Adventures of Huckleberry Finn. Intended at first as a simple story of a boy's adventures in the Mississippi Valley - a sequel to The Adventures of Tom Sawyer - the book grew and matured under Twain's hand into a work of immeasurable richness and complexity. More than a century after its publication, the critical debate over the symbolic significance of Huck's and Jim's voyage is still fresh, and it remains a major work that can be enjoyed at many levels: as an incomparable adventure story and as a classic of American humor.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495390745/huck-finn_dlx6lg.jpg")
+b29 = Book.create(title: "A Room of One's Own",
+                  author: "Virginia Woolf",
+                  description: "A Room of One's Own is an extended essay by Virginia Woolf. First published on 24 October 1929, the essay was based on a series of lectures she delivered at Newnham College and Girton College, two women's colleges at Cambridge University in October 1928. While this extended essay in fact employs a fictional narrator and narrative to explore women both as writers of and characters in fiction, the manuscript for the delivery of the series of lectures, titled Women and Fiction, and hence the essay, are considered non-fiction. The essay is generally seen as a feminist text, and is noted in its argument for both a literal and figural space for women writers within a literary tradition dominated by patriarchy.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495391055/220px-ARoomOfOnesOwn_vmjhm7.jpg")
+b30 = Book.create(title: "The Sound and the Fury",
+                  author: "William Faulkner",
+                  description: "The Sound and the Fury is the tragedy of the Compson family, featuring some of the most memorable characters in literature: beautiful, rebellious Caddy; the manchild Benjy; haunted, neurotic Quentin; Jason, the brutal cynic; and Dilsey, their black servant. Their lives fragmented and harrowed by history and legacy, the character’s voices and actions mesh to create what is arguably Faulkner’s masterpiece and one of the greatest novels of the twentieth century.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495391300/the-sound-fury_ifbv6i.jpg")
+b31 = Book.create(title: "Tales of the Jazz Age",
+                  author: "F. Scott Fitzgerald",
+                  description: "Tales of the Jazz Age (1922) is a collection of eleven short stories by F. Scott Fitzgerald. Divided into three separate parts, according to subject matter, it includes one of his better-known short stories, 'The Curious Case of Benjamin Button'.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495391423/tales-jazz-age_qrhbdn.jpg")
+b32 = Book.create(title: "Othello",
+                  author: "William Shakespeare",
+                  description: "In Othello, Shakespeare creates a powerful drama of a marriage that begins with fascination (between the exotic Moor Othello and the Venetian lady Desdemona), with elopement, and with intense mutual devotion and that ends precipitately with jealous rage and violent deaths. He sets this story in the romantic world of the Mediterranean, moving the action from Venice to the island of Cyprus and giving it an even more exotic coloring with stories of Othello's African past. Shakespeare builds so many differences into his hero and heroine—differences of race, of age, of cultural background—that one should not, perhaps, be surprised that the marriage ends disastrously. But most people who see or read the play feel that the love that the play presents between Othello and Desdemona is so strong that it would have overcome all these differences were it not for the words and actions of Othello's standard-bearer, Iago, who hates Othello and sets out to destroy him by destroying his love for Desdemona. As Othello succumbs to Iago's insinuations that Desdemona is unfaithful, fascination—which dominates the early acts of the play—turns to horror, especially for the audience. We are confronted by spectacles of a generous and trusting Othello in the grip of Iago's schemes; of an innocent Desdemona, who has given herself up entirely to her love for Othello only to be subjected to his horrifying verbal and physical assaults, the outcome of Othello's mistaken convictions about her faithlessness.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495391632/Othello_qdmjna.jpg")
+b33 = Book.create(title: "Ulysses",
+                  author: "James Joyce",
+                  description: "Ulysses chronicles the peripatetic appointments and encounters of Leopold Bloom in Dublin in the course of an ordinary day, 16 June 1904.[4][5] Ulysses is the Latinised name of Odysseus, the hero of Homer's epic poem Odyssey, and the novel establishes a series of parallels between the poem and the novel, with structural correspondences between the characters and experiences of Leopold Bloom and Odysseus, Molly Bloom and Penelope, and Stephen Dedalus and Telemachus, in addition to events and themes of the early twentieth century context of modernism, Dublin, and Ireland's relationship to Britain. The novel imitates registers of centuries of English literature and is highly allusive.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495391869/Ulysses_V1_apqhew.png")
+b34 = Book.create(title: "Heart of Darkness",
+                  author: "Joseph Conrad",
+                  description: "Dark allegory describes Marlow’s journey up the Congo River and his meeting with, and fascination by, Mr. Kurtz, a mysterious personage who dominates the unruly inhabitants of the region. Masterly blend of adventure, character development, psychological penetration. Considered by many Conrad’s finest, most enigmatic story.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495392179/heart-of-darkness_a0secz.jpg")
+b35 = Book.create(title: "Odyssè",
+                  author: "Homer",
+                  description: "'Muse, tell me of a man: a man of much resource, who was made to wander far and long, after he had sacked the sacred city of Troy. Many were the men whose lands he saw and came to know their thinking: many too the miseries at sea, which he suffered in his heart, as he sought to win his own life and the safety of his companions.' Recounting the epic journey home of Odysseus from the Trojan War, The Odyssey - alongside its sister poem The Iliad - stands as the well-spring of Western Civilisation and culture, an inspiration to poets, writers and thinkers for thousands of years since. This authoritative prose translation by Martin Hammond brings Homer's great poem of homecoming to life as Odysseus battles through such familiar dangers as the cave of the Cyclops, the call of the Sirens and his hostile reception back in his native land of Ithaca.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495392389/odyssey_zhfxiy.jpg")
+b36 = Book.create(title: "Tao Te Ching",
+                  author: "Lao Tzu",
+                  description: "Written most probably in the sixth century B.C. by Lao Tsu, this esoteric but infintely practical book has been translated into English more frequently than any other work except the Bible. Gia-fu Feng and Jane English's superb translation—the most accessible and authoritative modern English translation—offers the essence of each word and makes Lao Tsu's teaching immediate and alive. This edition includes an introduction and notes by the well-known writer and scholar of philosophy and comparative religion, Jacob Needleman.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495392549/tao_vofdqy.jpg")
+b37 = Book.create(title: "A Brief History of Time",
+                  author: "Stephen Hawking",
+                  description: "In the ten years since its publication in 1988, Stephen Hawking's classic work has become a landmark volume in scientific writing, with more than nine million copies in forty languages sold worldwide. That edition was on the cutting edge of what was then known about the origins and nature of the universe. But the intervening years have seen extraordinary advances in the technology of observing both the micro- and the macrocosmic worlds. These observations have confirmed many of Professor Hawking's theoretical predictions in the first edition of his book, including the recent discoveries of the Cosmic Background Explorer satellite (COBE), which probed back in time to within 300,000 years of the universe's beginning and revealed wrinkles in the fabric of space-time that he had projected. Eager to bring to his original text the new knowledge revealed by these observations, as well as his own recent research, Professor Hawking has prepared a new introduction to the book, written an entirely new chapter on wormholes and time travel, and updated the chapters throughout.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495392682/brief-time_f8efwi.jpg")
+b38 = Book.create(title: "The Tale of Genji",
+                  author: "Murasaki Shikibu",
+                  description: "Written in the eleventh century, this portrait of courtly life in medieval Japan is widely celebrated as the world's first novel. The Tale of Genji is a very long romance, running to fifty-four chapters and describing the court life of Heian Japan, from the tenth century into the eleventh.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495392933/tale-of-genji_y1vfc9.jpg")
+b39 = Book.create(title: "All Quiet on the Western Front",
+                  author: "Erich Maria Remarque",
+                  description: "All Quiet on the Western Front (German: Im Westen nichts Neues, lit. 'In the West Nothing New') is a novel by Erich Maria Remarque, a German veteran of World War I. The book describes the German soldiers' extreme physical and mental stress during the war, and the detachment from civilian life felt by many of these soldiers upon returning home from the front.",
+                  image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495393126/all_quiet_on_the_western_front_by_nguy0699-d1sdwh4_oxrvng.jpg")
 
 
 Bookshelf.destroy_all
@@ -173,3 +231,13 @@ Review.destroy_all
 
 r1 = Review.create(book_id: b1.id, user_id: u2.id, body: "first")
 r2 = Review.create(book_id: b1.id, user_id: u1.id, body: "second")
+r3 = Review.create(book_id: b1.id, user_id: u3.id, body: "third")
+r4 = Review.create(book_id: b1.id, user_id: u4.id, body: "fourth")
+r5 = Review.create(book_id: b1.id, user_id: u5.id, body: "fifth")
+r12 = Review.create(book_id: b2.id, user_id: u12.id, body: "Dave")
+r11 = Review.create(book_id: b2.id, user_id: u11.id, body: "That")
+r10 = Review.create(book_id: b2.id, user_id: u10.id, body: "Do")
+r9 = Review.create(book_id: b2.id, user_id: u9.id, body: "Can't")
+r8 = Review.create(book_id: b2.id, user_id: u8.id, body: "I")
+r7 = Review.create(book_id: b2.id, user_id: u7.id, body: "Afraid")
+r6 = Review.create(book_id: b2.id, user_id: u6.id, body: "I'm")
