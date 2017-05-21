@@ -35,7 +35,7 @@ export const destroyBookshelf = (id) => dispatch => {
 };
 
 export const updateBookshelf = bookshelf => dispatch => {
-  return APIUTIL.patchBookshelf(book).then(book => {
+  return APIUTIL.patchBookshelf(bookshelf).then(book => {
     dispatch(receiveNewBookshelf(bookshelf));
     return book;
   }, err => dispatch(receiveBookshelfErrors(err.responseJSON)));
