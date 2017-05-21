@@ -3,7 +3,6 @@ export const fectchReviews = (book_id) => (
     method: "GET",
     url: 'api/reviews',
     data: { book_id }
-
   })
 );
 
@@ -23,7 +22,7 @@ export const patchReview = review => {
 
 export const destroyReview = id => {
   return $.ajax({
-    method: "PATCH",
+    method: "DELETE",
     url: `api/reviews/${id}`
   });
 };

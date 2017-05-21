@@ -13,6 +13,7 @@ class ReviewsIndexItem extends React.Component {
     const { review, deleteReview } = this.props;
     return (
       <li className="review-index-item">
+        <h3 className="review-author">{review.username} - </h3>
         <p className="review-body">{review.body}</p>
         <i id="delete-review-button" className="fa fa-times fa-5" onClick={this.handleDelete.bind(this)}></i>
       </li>

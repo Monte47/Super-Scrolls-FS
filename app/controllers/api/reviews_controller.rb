@@ -25,7 +25,6 @@ class Api::ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find_by(book_id: review_params[:book_id], user_id: current_user.id) # or
     @review = Review.find(params[:id])
     @review.destroy
     render json: @review

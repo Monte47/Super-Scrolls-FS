@@ -1,6 +1,32 @@
+@import "colors";
+
 .reviews-section {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $third;
+
+  .reviews-index {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h3 {
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding: 0;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
 }

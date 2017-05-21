@@ -9,7 +9,7 @@ class ReviewsIndex extends React.Component {
   }
 
   componentWillMount() {
-    this.props.requestReviews();
+    this.props.requestReviews(this.props.match.params.bookId);
   }
 
   handleDebugger(e) {
