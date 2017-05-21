@@ -14,11 +14,6 @@ class BookshelfDetail extends React.Component {
     }
   }
 
-  handleDebugger(e) {
-    e.preventDefault();
-    debugger;
-  }
-
   render() {
     const { bookshelfDetail, books, deleteShelving } = this.props;
     if (books.length > 0) {

@@ -1,7 +1,9 @@
-export const fectchReviews = () => (
+export const fectchReviews = (book_id) => (
   $.ajax({
     method: "GET",
-    url: 'api/reviews'
+    url: 'api/reviews',
+    data: { book_id }
+
   })
 );
 

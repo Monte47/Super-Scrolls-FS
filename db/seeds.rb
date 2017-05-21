@@ -150,6 +150,8 @@ bs2 = Bookshelf.create(name: "Mom's favorites", user_id: u1.id)
 bs3 = Bookshelf.create(name: "Summertime Beach Books", user_id: u1.id)
 bs4 = Bookshelf.create(name: "Books I read in College", user_id: u2.id)
 
+Shelving.destroy_all
+
 s1 = Shelving.create(book_id: b26.id, bookshelf_id: bs3.id)
 s2 = Shelving.create(book_id: b27.id, bookshelf_id: bs3.id)
 s3 = Shelving.create(book_id: b16.id, bookshelf_id: bs3.id)
@@ -166,3 +168,8 @@ s13 = Shelving.create(book_id: b12.id, bookshelf_id: bs1.id)
 s14 = Shelving.create(book_id: b6.id, bookshelf_id: bs1.id)
 s15 = Shelving.create(book_id: b21.id, bookshelf_id: bs1.id)
 s16 = Shelving.create(book_id: b24.id, bookshelf_id: bs1.id)
+
+Review.destroy_all
+
+r1 = Review.create(book_id: b1.id, user_id: u2.id, body: "first")
+r2 = Review.create(book_id: b1.id, user_id: u1.id, body: "second")

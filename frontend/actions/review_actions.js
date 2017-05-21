@@ -12,8 +12,8 @@ export const clearReviewErrors = errors => ({
   type: CLEAR_REVIEW_ERRORS
 });
 
-export const requestReviews = () => dispatch => {
-  return APIUtil.fectchReviews().then(reviews => dispatch(receiveReviews(reviews)));
+export const requestReviews = (book_id) => dispatch => {
+  return APIUtil.fectchReviews(book_id).then(reviews => dispatch(receiveReviews(reviews)));
 };
 
 export const createReview = review => dispatch => {

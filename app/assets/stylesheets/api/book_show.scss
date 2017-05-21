@@ -2,14 +2,15 @@
 
 .book-show {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 40px;
-  height: 100vh;
 }
 
 .inner-show {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
