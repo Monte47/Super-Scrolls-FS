@@ -27,7 +27,8 @@ class ReviewsIndex extends React.Component {
 
   handleCreateReview(e) {
     e.preventDefault();
-    this.props.createReview({body: this.state.body, book_id: this.props.bookId });
+    this.props.createReview({body: this.state.body, book_id: this.props.bookId })
+    .then(() => this.setState({body: ""}));
   }
 
   update(property) {
