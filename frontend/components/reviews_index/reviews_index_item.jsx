@@ -36,9 +36,8 @@ class ReviewsIndexItem extends React.Component {
 
   handleUpdateReview(e) {
     e.preventDefault();
-    debugger;
     this.flipEdit();
-    this.props.updateReview({body: this.state.body, book_id: this.props.bookId});
+    this.props.updateReview({id: this.state.id, body: this.state.body, book_id: parseInt(this.props.match.params.bookId)});
   }
 
 
