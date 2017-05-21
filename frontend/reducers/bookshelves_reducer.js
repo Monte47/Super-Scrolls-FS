@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { RECEIVE_BOOKSHELVES, RECEIVE_NEW_BOOKSHELF, RECEIVE_BOOKSHELF_ERRORS, DELETE_BOOKSHELF } from '../actions/bookshelf_actions';
+import { RECEIVE_BOOKSHELVES, RECEIVE_NEW_BOOKSHELF, DELETE_BOOKSHELF } from '../actions/bookshelf_actions';
 
 const BookshelfReducer = (state={}, action) => {
   Object.freeze(state);
