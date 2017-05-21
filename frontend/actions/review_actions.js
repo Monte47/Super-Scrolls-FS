@@ -12,7 +12,7 @@ export const clearReviewErrors = errors => ({
   type: CLEAR_REVIEW_ERRORS
 });
 
-export const requestReiviews = () => dispatch => {
+export const requestReviews = () => dispatch => {
   return APIUtil.fectchReviews().then(reviews => dispatch(receiveReviews(reviews)));
 };
 

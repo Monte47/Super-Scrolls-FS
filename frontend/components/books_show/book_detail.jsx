@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
+import ReviewsIndexContainer from '../reviews_index/reviews_index_container';
 
 class BookDetail extends React.Component {
   constructor(props) {
@@ -89,6 +90,9 @@ class BookDetail extends React.Component {
             </div>
           </div>
         </div>
+        <section className="reviews-section">
+          <ReviewsIndexContainer />
+        </section>
       </section>
     );
   }
