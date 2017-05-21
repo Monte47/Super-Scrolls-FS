@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :books, only: [:index, :show, :create, :update, :destroy]
     resources :bookshelves, only: [:index, :show, :create, :update, :destroy]
     resource :shelvings, only: [:create, :destroy]
+    resources :reviews, only: [:index, :create, :update, :destroy]
   end
 
   root "static_pages#root"

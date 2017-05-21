@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :bookshelves, dependent: :destroy
   has_many :shelvings, through: :bookshelves
   has_many :books, through: :bookshelves
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 
   after_initialize :ensure_session_token
 

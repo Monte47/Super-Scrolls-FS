@@ -4,6 +4,6 @@ class Book < ApplicationRecord
 
   has_many :shelvings, dependent: :destroy
   has_many :bookshelves, through: :shelvings
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 
 end
