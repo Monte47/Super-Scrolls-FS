@@ -60,7 +60,9 @@ class ReviewsIndexItem extends React.Component {
   }
 
   flipEdit() {
-    this.setState({renderEdit: this.state.renderEdit === true ? false : true});
+    if(this.props.currentUser.id === this.props.review.user_id) {
+      this.setState({renderEdit: this.state.renderEdit === true ? false : true});
+    }
   }
 
   renderReview() {
