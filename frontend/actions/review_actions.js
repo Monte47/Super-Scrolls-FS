@@ -25,7 +25,7 @@ export const createReview = review => dispatch => {
 
 export const destroyReview = id => dispatch => {
   return APIUtil.destroyReview(id).then(review => dispatch(deleteReview(review)), () => console.log("error"))
-  .then( ({ review })  => dispatch(requestReviews(review.book_id)));
+  .then( ({ review }) => dispatch(requestReviews(review.book_id)));
 };
 
 export const updateReview = review => dispatch => {

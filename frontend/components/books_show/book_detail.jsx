@@ -14,13 +14,15 @@ class BookDetail extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.requestBook(this.props.match.params.bookId);
+    this.props.requestReviews(this.props.match.params.bookId);
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.bookId !== nextProps.match.params.bookId) {
       this.props.requestBook(nextProps.match.params.bookId);
+      this.props.requestReviews(nextProps.match.params.bookId);
     }
   }
 

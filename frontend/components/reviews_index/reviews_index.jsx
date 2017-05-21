@@ -12,6 +12,12 @@ class ReviewsIndex extends React.Component {
     this.props.requestReviews(this.props.match.params.bookId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.bookId !== nextProps.match.params.bookId) {
+      this.props.requestReviews(nextProps.match.params.bookId);
+    }
+  }
+
   handleDebugger(e) {
     e.preventDefault();
     debugger;
