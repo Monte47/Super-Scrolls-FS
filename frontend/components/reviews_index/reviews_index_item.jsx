@@ -5,6 +5,15 @@ class ReviewsIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.renderDelete = this.renderDelete.bind(this);
+    this.renderEdit = this.renderEdit.bind(this);
+    this.handleUpdateReview = this.handleUpdateReview.bind(this);
+    this.setState = this.setState.bind(this);
+    this.flipEdit = this.flipEdit.bind(this);
+    this.state = {
+      body: "",
+      id: parseInt(this.props.review.id),
+      renderEdit: false
+    };
   }
 
 
@@ -21,13 +30,59 @@ class ReviewsIndexItem extends React.Component {
     }
   }
 
-  render() {
+  update(property) {
+    return e => this.setState({ [property]: e.target.value});
+  }
+
+  handleUpdateReview(e) {
+    e.preventDefault();
+    debugger;
+    this.flipEdit();
+    this.props.updateReview({body: this.state.body, book_id: this.props.bookId});
+  }
+
+
+
+  renderEdit() {
+    if (this.state.renderEdit && this.props.currentUser.id === this.props.review.user_id) {
+      return (
+        <form id="reviews-edit-form" className="hi" onSubmit={this.handleUpdateReview}>
+        <textarea
+          id="body"
+          value={this.state.body}
+          placeholder="review..."
+          onChange={this.update("body")}>
+        </textarea>
+        <button id="edit-review-button">Update Review</button>
+      </form>
+      );
+    }
+  }
+
+  flipEdit() {
+    this.setState({renderEdit: this.state.renderEdit === true ? false : true});
+  }
+
+  renderReview() {
     const { review, deleteReview } = this.props;
+    if(!this.state.renderEdit) {
+      return (
+        <div className="shown">
+          <h3 className="review-author" onClick={this.flipEdit}>{review.username} - </h3>
+          <p id="review-body">{review.body}</p>
+          {this.renderDelete()}
+        </div>
+      );
+    }
+  }
+
+
+
+  render() {
     return (
       <li className="review-index-item">
-        <h3 className="review-author">{review.username} - </h3>
-        <p className="review-body">{review.body}</p>
-        {this.renderDelete()}
+        {this.renderEdit()}
+        {this.renderReview()}
       </li>
     );
   }

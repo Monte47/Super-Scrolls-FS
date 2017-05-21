@@ -51,13 +51,13 @@ class ReviewsIndex extends React.Component {
   }
 
   render() {
-    const { reviews, deleteReview, currentUser } = this.props;
+    const { reviews, deleteReview, currentUser, updateReview } = this.props;
     return (
       <section className="reviews-index">
         <h3>Reviews</h3>
         {this.renderReviewForm()}
         <ul>
-          {reviews.map(review => <ReviewsIndexItem key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser}/>)}
+          {reviews.map(review => <ReviewsIndexItem key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser} updateReview={updateReview}/>)}
         </ul>
       </section>
     );
