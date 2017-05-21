@@ -9,7 +9,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     if @review.save
-      render @review
+      render :show
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -18,7 +18,7 @@ class Api::ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id])
     if @review.update_attributes(review_params)
-      render @review
+      render :show
     else
       render json: @review.errors.full_messages, status: 422
     end
