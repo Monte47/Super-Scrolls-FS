@@ -9,3 +9,5 @@ export const selectBook = (state, id) => (
 );
 
 export const selectBookshelves = ({ bookshelves }) => values(bookshelves);
+
+export const selectReviews = ({ reviews }) => values(reviews);
