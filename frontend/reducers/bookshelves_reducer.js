@@ -6,7 +6,7 @@ const BookshelfReducer = (state={}, action) => {
   let nexState;
   switch (action.type) {
     case RECEIVE_BOOKSHELVES:
-      return merge({}, state, action.bookshelves);
+      return merge({}, action.bookshelves);
     case RECEIVE_NEW_BOOKSHELF:
       return merge({}, state, {
         [action.bookshelf.id]: action.bookshelf

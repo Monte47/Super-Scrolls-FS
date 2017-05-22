@@ -210,6 +210,9 @@ b39 = Book.create(title: "All Quiet on the Western Front",
 
 Bookshelf.destroy_all
 
+bs5 = Bookshelf.create(name: "Have Read", user_id: u1.id, default_shelf: true)
+bs6 = Bookshelf.create(name: "Currently Reading", user_id: u1.id, default_shelf: true)
+bs7 = Bookshelf.create(name: "Want to Read", user_id: u1.id, default_shelf: true)
 bs1 = Bookshelf.create(name: "My favorites", user_id: u1.id)
 bs2 = Bookshelf.create(name: "Mom's favorites", user_id: u1.id)
 bs3 = Bookshelf.create(name: "Summertime Beach Books", user_id: u1.id)
@@ -233,6 +236,17 @@ s13 = Shelving.create(book_id: b12.id, bookshelf_id: bs1.id)
 s14 = Shelving.create(book_id: b6.id, bookshelf_id: bs1.id)
 s15 = Shelving.create(book_id: b21.id, bookshelf_id: bs1.id)
 s16 = Shelving.create(book_id: b24.id, bookshelf_id: bs1.id)
+
+s17 = Shelving.create(book_id: b34.id, bookshelf_id: bs5.id)
+s18 = Shelving.create(book_id: b32.id, bookshelf_id: bs5.id)
+s19 = Shelving.create(book_id: b27.id, bookshelf_id: bs5.id)
+s20 = Shelving.create(book_id: b17.id, bookshelf_id: bs5.id)
+s21 = Shelving.create(book_id: b14.id, bookshelf_id: bs6.id)
+s22 = Shelving.create(book_id: b33.id, bookshelf_id: bs6.id)
+s23 = Shelving.create(book_id: b30.id, bookshelf_id: bs6.id)
+s24 = Shelving.create(book_id: b28.id, bookshelf_id: bs7.id)
+s25 = Shelving.create(book_id: b29.id, bookshelf_id: bs7.id)
+s26 = Shelving.create(book_id: b36.id, bookshelf_id: bs7.id)
 
 Review.destroy_all
 
