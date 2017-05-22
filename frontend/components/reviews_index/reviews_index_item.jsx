@@ -32,7 +32,7 @@ class ReviewsIndexItem extends React.Component {
   }
 
   renderDelete() {
-    if(this.props.currentUser.id === this.props.review.user_id) {
+    if(this.props.currentUser && this.props.currentUser.id === this.props.review.user_id) {
       return (
         <i id="delete-review-button" className="fa fa-times fa-5" onClick={this.handleDelete.bind(this)}></i>
       );
@@ -75,7 +75,7 @@ class ReviewsIndexItem extends React.Component {
   }
 
   hoverClass() {
-    if(this.props.currentUser.id && this.props.currentUser.id === this.props.review.user_id) {
+    if(this.props.currentUser && this.props.currentUser.id === this.props.review.user_id) {
       return "review-body current-user";
     } else {
       return "review-body";

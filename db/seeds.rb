@@ -22,6 +22,11 @@ u9 = User.create(username: "Jane A", password: "password")
 u10 = User.create(username: "Sylvia P", password: "password")
 u11 = User.create(username: "Agatha C.", password: "password")
 u12 = User.create(username: "Leo T.", password: "password")
+carl = User.create(username: "Car Sagan", password: "password")
+pirate = User.create(username: "Blackbeard", password: "password")
+sam = User.create(username: "Samuel L. Jackson", password: "password")
+hip = User.create(username: "Hipster", password: "hipster")
+busey = User.create(username: "Gary Busey", password: "password")
 
 Book.destroy_all
 
@@ -236,10 +241,66 @@ r2 = Review.create(book_id: b1.id, user_id: u1.id, body: Faker::Lorem.sentence(4
 r3 = Review.create(book_id: b1.id, user_id: u3.id, body: Faker::Lorem.sentence(4))
 r4 = Review.create(book_id: b1.id, user_id: u4.id, body: Faker::Lorem.sentence(4))
 r5 = Review.create(book_id: b1.id, user_id: u5.id, body: Faker::Lorem.sentence(4))
-r12 = Review.create(book_id: b2.id, user_id: u12.id, body: "Dave")
-r11 = Review.create(book_id: b2.id, user_id: u11.id, body: "That")
-r10 = Review.create(book_id: b2.id, user_id: u10.id, body: "Do")
-r9 = Review.create(book_id: b2.id, user_id: u9.id, body: "Can't")
-r8 = Review.create(book_id: b2.id, user_id: u8.id, body: "I")
-r7 = Review.create(book_id: b2.id, user_id: u7.id, body: "Afraid")
 r6 = Review.create(book_id: b2.id, user_id: u6.id, body: "I'm")
+r7 = Review.create(book_id: b2.id, user_id: u7.id, body: "Afraid")
+r8 = Review.create(book_id: b2.id, user_id: u8.id, body: "I")
+r9 = Review.create(book_id: b2.id, user_id: u9.id, body: "Can't")
+r10 = Review.create(book_id: b2.id, user_id: u10.id, body: "Do")
+r11 = Review.create(book_id: b2.id, user_id: u11.id, body: "That")
+r12 = Review.create(book_id: b2.id, user_id: u12.id, body: "Dave")
+
+r13 = Review.create(book_id: b3.id, user_id: carl.id, body: "Tesseract cosmic fugue Sea of Tranquility rich in heavy atoms something incredible is waiting to be known culture, ship of the imagination gathered by gravity decipherment shores of the cosmic ocean brain is the seed of intelligence permanence of the stars tingling of the spine as a patch of light a still more glorious dawn awaits another world cosmic fugue are creatures of the cosmos! Drake Equation from which we spring? Trillion, colonies. Rogue, cosmos the carbon in our apple pies? Permanence of the stars Euclid? Flatland a very small stage in a vast cosmic arena and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+")
+r14 = Review.create(book_id: b4.id, user_id: carl.id, body: "A still more glorious dawn awaits globular star cluster? Corpus callosum. Light years. Vangelis. Light years intelligent beings inconspicuous motes of rock and gas colonies descended from astronomers galaxies dispassionate extraterrestrial observer the only home we've ever known, colonies. Stirred by starlight consciousness cosmos a billion trillion, consciousness across the centuries not a sunrise but a galaxyrise, ship of the imagination Drake Equation permanence of the stars? Dream of the mind's eye white dwarf descended from astronomers a mote of dust suspended in a sunbeam extraordinary claims require extraordinary evidence and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+")
+r15 = Review.create(book_id: b5.id, user_id: carl.id, body: "Ship of the imagination hearts of the stars? Brain is the seed of intelligence science concept of the number one as a patch of light Flatland across the centuries intelligent beings, worldlets, tingling of the spine venture emerged into consciousness citizens of distant epochs consciousness, with pretty stories for which there's little good evidence, dispassionate extraterrestrial observer, brain is the seed of intelligence Apollonius of Perga and billions upon billions upon billions upon billions upon billions upon billions upon billions!
+")
+r16 = Review.create(book_id: b6.id, user_id: carl.id, body: "Trillion globular star cluster, permanence of the stars, something incredible is waiting to be known Euclid, the sky calls to us Rig Veda hundreds of thousands, emerged into consciousness! Tendrils of gossamer clouds preserve and cherish that pale blue dot! Tendrils of gossamer clouds, Rig Veda, worldlets tesseract citizens of distant epochs take root and flourish? Rich in mystery. A billion trillion at the edge of forever culture, star stuff harvesting star light extraordinary claims require extraordinary evidence Hypatia and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+")
+r17 = Review.create(book_id: b7.id, user_id: carl.id, body: "Cosmos. Extraordinary claims require extraordinary evidence quasar. Birth, rich in mystery star stuff harvesting star light science, worldlets, the only home we've ever known! Quasar hydrogen atoms. Globular star cluster brain is the seed of intelligence Apollonius of Perga circumnavigated a very small stage in a vast cosmic arena paroxysm of global death galaxies rogue, bits of moving fluff not a sunrise but a galaxyrise Rig Veda preserve and cherish that pale blue dot made in the interiors of collapsing stars decipherment and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+")
+r18 = Review.create(book_id: b8.id, user_id: carl.id, body: "A very small stage in a vast cosmic arena cosmos cosmic fugue. Prime number cosmos tesseract Sea of Tranquility. Consciousness laws of physics intelligent beings preserve and cherish that pale blue dot hearts of the stars star stuff harvesting star light worldlets Rig Veda permanence of the stars, stirred by starlight, cosmic fugue hundreds of thousands hearts of the stars courage of our questions, hearts of the stars Cambrian explosion realm of the galaxies? Hypatia permanence of the stars cosmos corpus callosum the only home we've ever known and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+")
+r19 = Review.create(book_id: b9.id, user_id: carl.id, body: "Extraplanetary billions upon billions encyclopaedia galactica a billion trillion. Preserve and cherish that pale blue dot, stirred by starlight gathered by gravity something incredible is waiting to be known, explorations gathered by gravity hundreds of thousands with pretty stories for which there's little good evidence radio telescope citizens of distant epochs Rig Veda. Cosmos corpus callosum intelligent beings, tingling of the spine Flatland something incredible is waiting to be known trillion hydrogen atoms dispassionate extraterrestrial observer at the edge of forever, white dwarf and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+")
+r20 = Review.create(book_id: b10.id, user_id: carl.id, body: "Quasar, Vangelis. Euclid something incredible is waiting to be known circumnavigated a mote of dust suspended in a sunbeam kindling the energy hidden in matter explorations, courage of our questions, prime number rich in mystery? Euclid, across the centuries at the edge of forever billions upon billions finite but unbounded. Star stuff harvesting star light. Network of wormholes, consciousness. Shores of the cosmic ocean! Rich in heavy atoms globular star cluster. Intelligent beings rogue courage of our questions cosmic ocean the carbon in our apple pies. Billions upon billions, stirred by starlight, as a patch of light hearts of the stars? Emerged into consciousness and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+")
+
+r21 = Review.create(book_id: b11.id, user_id: pirate.id, body: "Hardtack hogshead ho blow the man down case shot. Brethren of the Coast bilge water rum spike six pounders. Hearties jib Privateer bring a spring upon her cable bowsprit. Knave matey lookout rutters gibbet. Run a rig lanyard draught pink chandler.
+")
+r22 = Review.create(book_id: b12.id, user_id: pirate.id, body: "Chain Shot holystone topgallant pink Pieces of Eight. Parrel reef sails clipper sutler plunder. Nelsons folly barkadeer hogshead scourge of the seven seas fire in the hole. Smartly yardarm crow's nest Privateer quarterdeck. Matey squiffy Admiral of the Black gaff marooned. Chantey scuppers piracy wherry hornswaggle.
+")
+r23 = Review.create(book_id: b13.id, user_id: pirate.id, body: "Sheet nipper hulk avast. Black spot code of conduct boatswain yard. Grog matey crow's nest Jolly Roger.
+")
+r24 = Review.create(book_id: b14.id, user_id: pirate.id, body: "Measured fer yer chains piracy hornswaggle. Hardtack sutler log. Grog blossom Sail ho gangplank. Code of conduct flogging grog blossom. Hang the jib killick topsail. Loaded to the gunwalls salmagundi case shot. Brigantine Nelsons folly Arr. Bilge water hardtack bucko.
+")
+r25 = Review.create(book_id: b15.id, user_id: pirate.id, body: "Black jack scourge of the seven seas reef sails booty aft Pieces of Eight hempen halter hogshead. Yardarm scuttle reef sails scourge of the seven seas pirate execution dock deadlights overhaul. Pink squiffy tack scurvy bilge rat gibbet Pieces of Eight list. Driver code of conduct flogging topgallant Barbary Coast careen Admiral of the Black yard.
+")
+r26 = Review.create(book_id: b16.id, user_id: pirate.id, body: "Jack Tar belay squiffy. Broadside Spanish Main boatswain. Scallywag heave down squiffy. Bucko splice the main brace crimp. Booty six pounders rigging. No prey, no pay yo-ho-ho spanker.
+")
+r27 = Review.create(book_id: b17.id, user_id: pirate.id, body: "Lateen sail strike colors Plate Fleet to go on account chase wherry holystone provost yo-ho-ho hempen halter Pirate Round wench. Warp boom Corsair starboard red ensign list run a shot across the bow lookout deadlights piracy sloop hearties. Transom execution dock run a shot across the bow hang the jib Cat o'nine tails walk the plank come about schooner ho port overhaul skysail.
+")
+
+r28 = Review.create(book_id: b18.id, user_id: sam.id, body: "
+Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.")
+r29 = Review.create(book_id: b19.id, user_id: sam.id, body: "Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.")
+r30 = Review.create(book_id: b20.id, user_id: sam.id, body: "Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.")
+r31 = Review.create(book_id: b21.id, user_id: sam.id, body: "The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. The animals can't manufacture the amino acid lysine. Unless they're continually supplied with lysine by us, they'll slip into a coma and die.")
+r32 = Review.create(book_id: b22.id, user_id: sam.id, body: "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.")
+e33 = Review.create(book_id: b23.id, user_id: sam.id, body: "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.")
+r34 = Review.create(book_id: b24.id, user_id: sam.id, body: "The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.")
+r35 = Review.create(book_id: b25.id, user_id: sam.id, body: "
+Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.")
+r36 = Review.create(book_id: b26.id, user_id: sam.id, body: "Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.")
+r37 = Review.create(book_id: b27.id, user_id: sam.id, body: "You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.
+")
+
+r38 = Review.create(book_id: b28.id, user_id: hip.id, body: Faker::Hipster.paragraph)
+r39 = Review.create(book_id: b29.id, user_id: hip.id, body: Faker::Hipster.paragraph)
+r40 = Review.create(book_id: b30.id, user_id: hip.id, body: Faker::Hipster.paragraph)
+r41 = Review.create(book_id: b31.id, user_id: hip.id, body: Faker::Hipster.paragraph)
+r42 = Review.create(book_id: b32.id, user_id: hip.id, body: Faker::Hipster.paragraph)
+r43 = Review.create(book_id: b33.id, user_id: hip.id, body: Faker::Hipster.paragraph)
+r44 = Review.create(book_id: b34.id, user_id: hip.id, body: Faker::Hipster.paragraph)
+r45 = Review.create(book_id: b35.id, user_id: hip.id, body: Faker::Hipster.paragraph)
+r46 = Review.create(book_id: b36.id, user_id: hip.id, body: Faker::Hipster.paragraph)
