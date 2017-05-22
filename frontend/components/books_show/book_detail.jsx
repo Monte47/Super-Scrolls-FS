@@ -61,7 +61,6 @@ class BookDetail extends React.Component {
   renderBookshelves() {
     let { bookDetail } = this.props;
     const bookshelves = this.props.bookshelves;
-      console.log(bookshelves);
       return (
         <section className="book-detail-shelves-container">
           <form className="book-show-bookshelf-form" onSubmit={this.handleCreateShelving}>
