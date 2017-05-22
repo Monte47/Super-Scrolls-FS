@@ -21,35 +21,55 @@
       width: 100%;
       flex-direction: column;
       padding: 0;
-
+      .review-index-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: $second;
+        border-bottom: solid #000;
+        .review-details {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          h3 {
+            margin: 0;
+          }
+        }
+      }
+      .review-index-item:last-child {
+        border-bottom: none;
+      }
     }
   }
 }
 
-.review-index-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: $second;
-  .review-details {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    h3 {
-      margin: 0;
-    }
-  }
-}
 
 .reviews-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  #body {
-    margin: 0;
-    margin-bottom: 3px;
-    height: 150px;
+}
+
+#body {
+  margin: 0;
+  margin-bottom: 3px;
+  height: 150px;
+
+}
+
+#reviews-edit-form {
+  display: flex;
+  button {
+    margin-left: 5px;
   }
+}
+
+#delete-review-button {
+  font-size: 30px;
+}
+
+#delete-review-button:hover {
+  font-size: 40px;
 }
