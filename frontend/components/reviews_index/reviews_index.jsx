@@ -13,6 +13,7 @@ class ReviewsIndex extends React.Component {
 
   componentDidMount() {
     this.props.requestReviews(this.props.match.params.bookId);
+    this.props.clearErrors();
   }
 
   componentWillMount() {
@@ -28,7 +29,8 @@ class ReviewsIndex extends React.Component {
   handleCreateReview(e) {
     e.preventDefault();
     this.props.createReview({body: this.state.body, book_id: this.props.bookId })
-    .then(() => this.setState({body: ""}));
+    .then(() => this.setState({body: ""}))
+    .then(() => this.props.clearErrors());
   }
 
   update(property) {
@@ -51,14 +53,29 @@ class ReviewsIndex extends React.Component {
     }
   }
 
+  errors() {
+    if(this.props.errors) {
+      return (
+        this.props.errors.map((error, i) => {
+          return (<li className="error" key={i}>{error}</li>);
+        })
+      );
+    }
+  }
+
   render() {
-    const { reviews, deleteReview, currentUser, updateReview } = this.props;
+    const { reviews, deleteReview, currentUser, updateReview, errors, clearErrors } = this.props;
     return (
       <section className="reviews-index">
         <h3>Reviews</h3>
-        {this.renderReviewForm()}
+        <div className="form-box">
+          <ul className="errors-list">
+            {this.errors()}
+          </ul>
+          {this.renderReviewForm()}
+        </div>
         <ul>
-          {reviews.map(review => <ReviewsIndexItem key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser} updateReview={updateReview}/>)}
+          {reviews.map(review => <ReviewsIndexItem key={review.id} review={review} deleteReview={deleteReview} currentUser={currentUser} updateReview={updateReview} clearErrors={clearErrors}/>)}
         </ul>
       </section>
     );

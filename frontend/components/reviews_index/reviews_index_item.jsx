@@ -16,6 +16,13 @@ class ReviewsIndexItem extends React.Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.review) {
+      this.setState({
+        body: nextProps.review.body
+      });
+    }
+  }
 
   handleDelete(e) {
     e.preventDefault();
@@ -37,7 +44,8 @@ class ReviewsIndexItem extends React.Component {
   handleUpdateReview(e) {
     e.preventDefault();
     this.flipEdit();
-    this.props.updateReview({id: this.state.id, body: this.state.body, book_id: parseInt(this.props.match.params.bookId)});
+    this.props.updateReview({id: this.state.id, body: this.state.body, book_id: parseInt(this.props.match.params.bookId)})
+    .then(() => this.props.clearErrors());
   }
 
 

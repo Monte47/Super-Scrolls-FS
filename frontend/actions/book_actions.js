@@ -4,13 +4,13 @@ export const CREATE_BOOK = "CREATE_BOOK";
 export const DELETE_BOOK = "DELETE_BOOK";
 export const RECEIVE_NEW_BOOK = "RECEIVE_NEW_BOOK";
 export const RECEIVE_BOOK_ERRORS = "RECEIVE_BOOK_ERRORS";
-export const CLEAR_BOOK_ERRORS = "CLEAR_BOOK_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
 export const UPDATE_BOOK = "UPDATE_BOOK";
 
 import * as APIUtil from '../util/book_api_util';
 
-export const clearBookErrors = errors => ({
-  type: CLEAR_BOOK_ERRORS,
+export const clearErrors = errors => ({
+  type: CLEAR_ERRORS,
   errors
 });
 

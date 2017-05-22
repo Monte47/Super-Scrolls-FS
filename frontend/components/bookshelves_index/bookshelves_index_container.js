@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import BookshelvesIndex from './bookshelves_index';
 import { requestBookshelves, createBookshelf, destroyBookshelf } from '../../actions/bookshelf_actions';
 import { selectBookshelves } from '../../reducers/selectors';
-import { clearBookErrors } from '../../actions/book_actions';
+import { clearErrors } from '../../actions/book_actions';
 
 const mapStateToProps = (state) => ({
   bookshelves: selectBookshelves(state),
@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
   requestBookshelves: () => dispatch(requestBookshelves()),
   createBookshelf: bookshelf => dispatch(createBookshelf(bookshelf)),
   deleteBookshelf: id => dispatch(destroyBookshelf(id)),
-  clearErrors: errors => dispatch(clearBookErrors(errors))
+  clearErrors: errors => dispatch(clearErrors(errors))
 });
 
 export default connect(
