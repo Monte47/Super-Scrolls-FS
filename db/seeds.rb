@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'faker'
+
 User.destroy_all
 
 u1 = User.create(username: "Monte", password: "password")
@@ -229,11 +231,11 @@ s16 = Shelving.create(book_id: b24.id, bookshelf_id: bs1.id)
 
 Review.destroy_all
 
-r1 = Review.create(book_id: b1.id, user_id: u2.id, body: "first")
-r2 = Review.create(book_id: b1.id, user_id: u1.id, body: "second")
-r3 = Review.create(book_id: b1.id, user_id: u3.id, body: "third")
-r4 = Review.create(book_id: b1.id, user_id: u4.id, body: "fourth")
-r5 = Review.create(book_id: b1.id, user_id: u5.id, body: "fifth")
+r1 = Review.create(book_id: b1.id, user_id: u2.id, body: Faker::Lorem.sentence(4))
+r2 = Review.create(book_id: b1.id, user_id: u1.id, body: Faker::Lorem.sentence(4))
+r3 = Review.create(book_id: b1.id, user_id: u3.id, body: Faker::Lorem.sentence(4))
+r4 = Review.create(book_id: b1.id, user_id: u4.id, body: Faker::Lorem.sentence(4))
+r5 = Review.create(book_id: b1.id, user_id: u5.id, body: Faker::Lorem.sentence(4))
 r12 = Review.create(book_id: b2.id, user_id: u12.id, body: "Dave")
 r11 = Review.create(book_id: b2.id, user_id: u11.id, body: "That")
 r10 = Review.create(book_id: b2.id, user_id: u10.id, body: "Do")

@@ -9,6 +9,7 @@ class ReviewsIndexItem extends React.Component {
     this.handleUpdateReview = this.handleUpdateReview.bind(this);
     this.setState = this.setState.bind(this);
     this.flipEdit = this.flipEdit.bind(this);
+    this.hoverClass = this.hoverClass.bind(this);
     this.state = {
       body: "",
       id: parseInt(this.props.review.id),
@@ -73,13 +74,21 @@ class ReviewsIndexItem extends React.Component {
     }
   }
 
+  hoverClass() {
+    if(this.props.currentUser.id && this.props.currentUser.id === this.props.review.user_id) {
+      return "review-body current-user";
+    } else {
+      return "review-body";
+    }
+  }
+
   renderReview() {
     const { review, deleteReview } = this.props;
     if(!this.state.renderEdit) {
       return (
         <div className="review-details">
           <h3 className="review-author" onClick={this.flipEdit}>{review.username} - </h3>
-          <p id="review-body">{review.body}</p>
+          <p className={this.hoverClass()} onClick={this.flipEdit}>{review.body}</p>
           {this.renderDelete()}
         </div>
       );

@@ -42,7 +42,7 @@
           }
           p {
             width: 80%;
-            text-align: left;
+            text-align: center;
           }
         }
       }
@@ -77,8 +77,25 @@
 
 #delete-review-button {
   font-size: 30px;
+  &:hover {
+    font-size: 40px;
+    cursor: pointer;
+  }
 }
 
-#delete-review-button:hover {
-  font-size: 40px;
+
+.review-body {
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
+.current-user {
+  color: #3232ff;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
