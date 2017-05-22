@@ -3,6 +3,15 @@ class Api::ShelvingsController < ApplicationController
   def create
     @shelving = Shelving.new(shelving_params)
     if @shelving.save
+      if @shelving.bookshelf.default_shelf
+        all_shelvings = Shelving.includes(:bookshelf).where(book_id: @shelving.book_id)
+        all_shelvings.each do |shelving|
+          next if shelving.id == @shelving.id
+          if shelving.bookshelf.default_shelf && current_user.id == shelving.bookshelf.user_id
+            shelving.destroy
+          end
+        end
+      end
       render json: @shelving.book
     else
       render json: @shelving.errors.full_messages, status: 422
