@@ -70,6 +70,7 @@ class BookDetail extends React.Component {
             </select>
             <button id="show-add-to-bookshelf-button">Add to Shelf</button>
           </form>
+          <h3>This books is curently shelved on:</h3>
           {this.renderShelves(bookDetail.bookshelves)}
         </section>
       );
@@ -85,8 +86,8 @@ class BookDetail extends React.Component {
           </figure>
           <div className="right-book-detail">
             <div className="book-details">
+              {this.renderBookshelves()}
               <div className="book-detail-headers">
-                {this.renderBookshelves()}
                 <h2>{bookDetail.title}</h2>
                 <h3>{bookDetail.author}</h3>
               </div>
