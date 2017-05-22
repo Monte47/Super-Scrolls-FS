@@ -26,7 +26,8 @@ class ReviewsIndexItem extends React.Component {
 
   handleDelete(e) {
     e.preventDefault();
-    this.props.deleteReview(this.props.review.id);
+    this.props.deleteReview(this.props.review.id)
+    .then(() => this.props.clearErrors());
   }
 
   renderDelete() {
@@ -76,7 +77,7 @@ class ReviewsIndexItem extends React.Component {
     const { review, deleteReview } = this.props;
     if(!this.state.renderEdit) {
       return (
-        <div className="shown">
+        <div className="review-details">
           <h3 className="review-author" onClick={this.flipEdit}>{review.username} - </h3>
           <p id="review-body">{review.body}</p>
           {this.renderDelete()}
