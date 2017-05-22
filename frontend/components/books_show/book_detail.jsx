@@ -18,12 +18,14 @@ class BookDetail extends React.Component {
   componentWillMount() {
     this.props.requestBook(this.props.match.params.bookId);
     this.props.requestReviews(this.props.match.params.bookId);
+    this.props.requestBookshelves();
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.bookId !== nextProps.match.params.bookId) {
       this.props.requestBook(nextProps.match.params.bookId);
       this.props.requestReviews(nextProps.match.params.bookId);
+      this.props.requestBookshelves();
     }
   }
 
@@ -47,7 +49,7 @@ class BookDetail extends React.Component {
 
   }
 
-  renderShelves(shelves) {
+  renderShelves(shelves = []) {
     const userShelves = shelves.filter( (shelf) => shelf.user_id === this.props.currentUserId );
     return (
       <ul className="shelvings-display">
@@ -57,8 +59,9 @@ class BookDetail extends React.Component {
   }
 
   renderBookshelves() {
-    const { bookshelves, bookDetail } = this.props;
-    if(bookDetail.bookshelves && bookshelves.length > 0) {
+    let { bookDetail } = this.props;
+    const bookshelves = this.props.bookshelves;
+      console.log(bookshelves);
       return (
         <section className="book-detail-shelves-container">
           <form className="book-show-bookshelf-form" onSubmit={this.handleCreateShelving}>
@@ -71,11 +74,6 @@ class BookDetail extends React.Component {
           {this.renderShelves(bookDetail.bookshelves)}
         </section>
       );
-    } else {
-      return (
-        <div></div>
-      );
-    }
   }
 
   render() {
