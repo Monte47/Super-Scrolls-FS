@@ -9,6 +9,7 @@ class BookDetail extends React.Component {
     this.handleCreateShelving = this.handleCreateShelving.bind(this);
     this.update = this.update.bind(this);
     this.renderShelves = this.renderShelves.bind(this);
+    this.handleDeleteShelving = this.handleDeleteShelving.bind(this);
     this.state = {
       book_id: 0,
       bookshelf_id: 0
@@ -46,14 +47,26 @@ class BookDetail extends React.Component {
       e.preventDefault();
       this.setState({ [property]: parseInt(e.target.value)});
     };
+  }
 
+  handleDeleteShelving(shelf) {
+    console.log("hello");
+    return e => {
+      e.preventDefault();
+      this.props.destroyShelving({book_id: this.props.bookDetail.id, bookshelf_id: shelf.id})
+      .then(() => this.props.requestBook(this.props.match.params.bookId));
+    };
   }
 
   renderShelves(shelves = []) {
     const userShelves = shelves.filter( (shelf) => shelf.user_id === this.props.currentUserId );
     return (
       <ul className="shelvings-display">
-        {userShelves.map((shelf, i) => <li className="shelving-display" key={i}>{shelf.name}</li>)}
+        {userShelves.map((shelf, i) =>
+          <li className="shelving-display" key={i}>
+            {shelf.name}
+            <i id="delete-shelving-book-show" className="fa fa-times fa-5" onClick={this.handleDeleteShelving(shelf)}></i>
+          </li>)}
       </ul>
     );
   }
