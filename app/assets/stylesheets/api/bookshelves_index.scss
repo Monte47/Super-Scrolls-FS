@@ -66,6 +66,9 @@
       margin-bottom: 10px;
     }
   }
+  li:nth-child(3) {
+    border-bottom: solid;
+  }
 }
 
 #delete-bookshelf-button {

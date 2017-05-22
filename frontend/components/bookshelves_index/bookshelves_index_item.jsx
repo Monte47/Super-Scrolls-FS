@@ -13,7 +13,6 @@ class BookshelvesIndexItem extends React.Component {
   }
 
   xbutton() {
-    debugger;
     if (this.props.bookshelf && !this.props.bookshelf.default_shelf) {
       return (
         <i id="delete-bookshelf-button" className="fa fa-times fa-5" onClick={this.handleDelete.bind(this)}></i>
