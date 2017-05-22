@@ -21,7 +21,7 @@ class BookshelfDetail extends React.Component {
         <section className="bookshelf-detail">
           <div className="bookshelf-list-header">
             <h3>Title</h3>
-            <h3>Author</h3>
+            <h2>Author</h2>
           </div>
           <ul className="bookshelf-books-list">
             {books.map(book => <BookshelfDetailItem key={book.id} book={book} bookshelfId={bookshelfDetail.id} deleteShelving={deleteShelving} />)}
@@ -34,7 +34,7 @@ class BookshelfDetail extends React.Component {
         <section className="bookshelf-detail">
           <div className="bookshelf-list-header">
             <h3>Title</h3>
-            <h3>Author</h3>
+            <h2>Author</h2>
           </div>
           <img src="http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495326388/cobwebs_vjq9xl.png" />
         </section>
