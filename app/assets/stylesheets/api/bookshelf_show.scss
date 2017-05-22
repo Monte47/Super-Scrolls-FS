@@ -13,12 +13,17 @@
 
   .bookshelf-list-header {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     background-color: $fourth;
-    h3 {
-      margin-left: 240px;
+    :first-child {
       font-family: PayTone One;
       font-size: 30px;
-      padding: 20px;
+    }
+    :last-child {
+      font-family: Paytone One;
+      font-size: 30px;
+      border-right: none;
     }
   }
 
@@ -32,19 +37,21 @@
 .bookshelf-books-list-item {
   display: flex;
   padding: 30px;
+  padding-bottom: 5px;
 }
 
 .bookshelf-list-item-details {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
   h2 {
     margin-left: 40px;
-    width: 200px;
+    width: 300px;
   }
 
   h3 {
-    margin-left: 40px;
+    margin-left: 0;
   }
 }
 
@@ -52,4 +59,13 @@
 .bookshelf-list-item-cover {
   height: 150px;
   width: 100px;
+}
+
+#delete-shelving-button {
+  font-size: 30px;
+  cursor: pointer;
+  padding-left: 10px;
+  &:hover {
+    font-size: 40px;
+  }
 }
