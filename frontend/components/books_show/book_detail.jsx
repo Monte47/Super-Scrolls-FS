@@ -8,6 +8,7 @@ class BookDetail extends React.Component {
     this.renderBookshelves = this.renderBookshelves.bind(this);
     this.handleCreateShelving = this.handleCreateShelving.bind(this);
     this.update = this.update.bind(this);
+    this.renderShelves = this.renderShelves.bind(this);
     this.state = {
       book_id: 0,
       bookshelf_id: 0
@@ -46,17 +47,29 @@ class BookDetail extends React.Component {
 
   }
 
+  renderShelves(shelves) {
+    const userShelves = shelves.filter( (shelf) => shelf.user_id === this.props.currentUserId );
+    return (
+      <ul className="shelvings-display">
+        {userShelves.map((shelf, i) => <li className="shelving-display" key={i}>{shelf.name}</li>)}
+      </ul>
+    );
+  }
+
   renderBookshelves() {
-    const { bookshelves } = this.props;
-    if(bookshelves.length > 0) {
+    const { bookshelves, bookDetail } = this.props;
+    if(bookDetail.bookshelves && bookshelves.length > 0) {
       return (
-        <form className="book-show-bookshelf-form" onSubmit={this.handleCreateShelving}>
-          <select onChange={this.update("bookshelf_id")} defaultValue="Bookshelf">
-            <option defaultValue disabled>Bookshelf</option>
-            {bookshelves.map(bookshelf => <option key={bookshelf.id} value={bookshelf.id}>{bookshelf.name}</option>)}
-          </select>
-          <button id="show-add-to-bookshelf-button">Add to Shelf</button>
-        </form>
+        <section className="book-detail-shelves-container">
+          <form className="book-show-bookshelf-form" onSubmit={this.handleCreateShelving}>
+            <select onChange={this.update("bookshelf_id")} defaultValue="Bookshelf">
+              <option defaultValue disabled>Bookshelf</option>
+              {bookshelves.map(bookshelf => <option key={bookshelf.id} value={bookshelf.id}>{bookshelf.name}</option>)}
+            </select>
+            <button id="show-add-to-bookshelf-button">Add to Shelf</button>
+          </form>
+          {this.renderShelves(bookDetail.bookshelves)}
+        </section>
       );
     } else {
       return (

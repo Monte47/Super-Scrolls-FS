@@ -6,7 +6,8 @@ import { requestReviews } from '../../actions/review_actions';
 
 const mapStateToProps = (state) => ({
   bookDetail: state.bookDetail,
-  bookshelves: state.session.bookshelves
+  bookshelves: state.session.bookshelves,
+  currentUserId: state.session.currentUser.id
 });
 
 const mapDispatchToProps = dispatch => ({
