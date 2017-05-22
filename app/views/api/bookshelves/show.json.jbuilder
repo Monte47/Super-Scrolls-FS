@@ -1,4 +1,4 @@
-json.extract! @bookshelf, :id, :name, :user_id
+json.extract! @bookshelf, :id, :name, :user_id, :default_shelf
 
 json.books do
   @bookshelf.books.each do |book|
