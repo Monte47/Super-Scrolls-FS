@@ -14,15 +14,23 @@ class BooksIndex extends React.Component {
 
   render() {
     const { books } = this.props;
+    let books1 = books.slice(0,3);
+    let books2 = books.slice(3);
     return (
-      <section className="books-index">
-        <Link to="/book/new">
-          <button type="button" className="new-book-button">New Book</button>
-        </Link>
-        <ul>
-          {books.map(book => <BooksIndexItem key={book.id} book={book} />)}
-        </ul>
-      </section>
+      <div>
+        <section className="books-index">
+          <Link to="/book/new">
+            <button type="button" className="new-book-button">New Book</button>
+          </Link>
+          <ul>
+            {books1.map(book => <BooksIndexItem key={book.id} book={book} />)}
+          </ul>
+          <ul className="second-ul">
+            {books2.map(book => <BooksIndexItem key={book.id} book={book} />)}
+          </ul>
+        </section>
+        <div className="second-box"></div>
+      </div>
     );
   }
 }

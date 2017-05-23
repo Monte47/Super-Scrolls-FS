@@ -1,8 +1,21 @@
+@import 'colors';
+
 .books-index {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
+  /* The image used */
+  background-image: url("http://res.cloudinary.com/dbc0rv0hu/image/upload/bo_14px_solid_rgb:000,o_100/v1495498775/background1_kax7xs.jpg");
+
+  /* Set a specific height */
+  height: 550px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .books-index ul {
@@ -12,8 +25,8 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin-top: 20px;
 }
 
@@ -60,4 +73,16 @@
       filter: blur(5px);
     }
   }
+}
+
+.second-ul {
+  background-color: $fifth;
+  background: linear-gradient(to right, $fifth , #f3eccf);
+}
+
+.second-box {
+  width: 100%;
+  height: 200px;
+  background-color: $fifth;
+  background: linear-gradient(to right, $fifth , #f3eccf);
 }

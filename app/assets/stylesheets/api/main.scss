@@ -4,15 +4,19 @@
 .App {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 body {
   margin: 0px;
+  height: 100%;
 }
 
 #root {
   background-color: $fifth;
+  background: linear-gradient(to right, $fifth , #f3eccf);
   font-family: Comfortaa;
+  height: 100%;
 }
 
 button {
