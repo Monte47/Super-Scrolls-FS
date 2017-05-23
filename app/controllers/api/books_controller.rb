@@ -1,7 +1,7 @@
 class Api::BooksController < ApplicationController
 
   def index
-    @books = Book.limit(9).offset(params[:offset]).order("id")
+    @books = Book.limit(12).offset(params[:offset]).order("id")
     render :index
   end
 

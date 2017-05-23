@@ -21,7 +21,7 @@ class BooksIndex extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     const nextTotalBooks = nextProps.books.length;
-    if(!(nextTotalBooks % 9 === 0)) {
+    if(!(nextTotalBooks % 12 === 0)) {
       this.setState({ continueFetching: false});
     }
     this.setState({ totalBooks: nextTotalBooks });
