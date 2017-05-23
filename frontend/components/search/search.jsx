@@ -18,13 +18,16 @@ class Search extends React.Component{
 
   render() {
     return(
-      <div>
+      <div className="search-container">
         <input
           type="text"
           placeholder="Search.."
           value={this.state.searchStr}
           onChange={this.handleSearch()}
           />
+        <div className="search-results-container">
+          
+        </div>
       </div>
     );
   }

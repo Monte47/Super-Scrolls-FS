@@ -1,0 +1,19 @@
+@import 'colors';
+
+
+.search-container {
+  position: relative;
+
+  .search-results-container {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border: solid;
+    z-index: 5;
+    display: none;
+  }
+  input:hover + .search-results-container {
+    display: flex;
+    background-color: white;
+  }
+}
