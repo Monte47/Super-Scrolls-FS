@@ -21,14 +21,18 @@ class BooksIndex extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     const nextTotalBooks = nextProps.books.length;
-    if(nextTotalBooks % 12 !== 0) {
+    if(!(nextTotalBooks % 12 === 0)) {
       this.setState({ continueFetching: false});
     }
     this.setState({ totalBooks: nextTotalBooks });
   }
 
   handleInfiniteScrolling() {
-    if(document.body.scrollHeight - 100 < document.body.scrollTop + window.innerHeight && this.state.continueFetching) {
+    let totalHeight = document.documentElement.scrollHeight;
+    let clientHeight = document.documentElement.clientHeight;
+    let scrollTop = (document.body && document.body.scrollTop)
+    ? document.body.scrollTop : document.documentElement.scrollTop;
+    if( totalHeight - 100 < scrollTop + clientHeight  && this.state.continueFetching) {
       this.props.requestBooks(this.state.totalBooks);
     }
   }
