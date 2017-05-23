@@ -10,6 +10,18 @@
   margin-bottom: 5%;
   width: 65%;
 
+  p {
+    text-align: center;
+    font-family: Patua One;
+    font-size: 30px;
+    background-image: url("http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495326388/cobwebs_vjq9xl.png");
+    background-size: 300px 330px;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 30px;
+  }
 
   .bookshelf-list-header {
     display: flex;

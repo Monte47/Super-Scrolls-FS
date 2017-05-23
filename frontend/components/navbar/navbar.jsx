@@ -28,6 +28,9 @@ class Navbar extends React.Component {
           </div>
           <div className="RightNav">
             <button onClick={this.handleLogout.bind(this)} type="button" className="Logout Button">Logout</button>
+            <a href="https://github.com/Monte47/Super-Scrolls-FS" target="_blank">
+              <i className="fa fa-github" id="github-link" aria-hidden="true"></i>
+            </a>
           </div>
         </nav>
       );
@@ -49,6 +52,9 @@ class Navbar extends React.Component {
             <Link to="/signup">
               <button type="button" className="Signup Button">Sign Up</button>
             </Link>
+            <a href="https://github.com/Monte47/Super-Scrolls-FS" target="_blank">
+              <i className="fa fa-github" id="github-link" aria-hidden="true"></i>
+            </a>
           </div>
         </nav>
       );

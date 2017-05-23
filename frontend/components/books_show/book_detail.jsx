@@ -50,7 +50,6 @@ class BookDetail extends React.Component {
   }
 
   handleDeleteShelving(shelf) {
-    console.log("hello");
     return e => {
       e.preventDefault();
       this.props.destroyShelving({book_id: this.props.bookDetail.id, bookshelf_id: shelf.id})

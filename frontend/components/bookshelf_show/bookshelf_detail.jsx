@@ -36,7 +36,7 @@ class BookshelfDetail extends React.Component {
             <h3>Title</h3>
             <h2>Author</h2>
           </div>
-          <img src="http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495326388/cobwebs_vjq9xl.png" />
+          <p>This bookshelf is currently empty</p>
         </section>
       );
     }
