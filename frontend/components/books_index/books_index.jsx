@@ -28,7 +28,7 @@ class BooksIndex extends React.Component {
   }
 
   handleInfiniteScrolling() {
-    if(document.body.scrollHeight - 200 < document.body.scrollTop + window.innerHeight && this.state.continueFetching) {
+    if(document.body.scrollHeight - 100 < document.body.scrollTop + window.innerHeight && this.state.continueFetching) {
       this.props.requestBooks(this.state.totalBooks);
     }
   }
