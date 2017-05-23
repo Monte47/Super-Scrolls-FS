@@ -9,7 +9,7 @@ import { selectBookshelves } from '../../reducers/selectors';
 const mapStateToProps = (state) => ({
   bookDetail: state.bookDetail,
   bookshelves: selectBookshelves(state),
-  currentUserId: state.session.currentUser.id
+  currentUser: state.session.currentUser || {}
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -19,7 +19,9 @@ class BookDetail extends React.Component {
   componentWillMount() {
     this.props.requestBook(this.props.match.params.bookId);
     this.props.requestReviews(this.props.match.params.bookId);
-    this.props.requestBookshelves();
+    if(this.props.currentUser.id) {
+      this.props.requestBookshelves();
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -58,7 +60,7 @@ class BookDetail extends React.Component {
   }
 
   renderShelves(shelves = []) {
-    const userShelves = shelves.filter( (shelf) => shelf.user_id === this.props.currentUserId );
+    const userShelves = shelves.filter( (shelf) => shelf.user_id === this.props.currentUser.id );
     return (
       <ul className="shelvings-display">
         {userShelves.map((shelf, i) =>
