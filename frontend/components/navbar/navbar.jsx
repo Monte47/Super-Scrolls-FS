@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import SearchContainer from '../search/search_container';
 
 class Navbar extends React.Component {
 
@@ -25,6 +26,9 @@ class Navbar extends React.Component {
             <Link to="/bookshelves">
               <span id="my-books-nav-link">My Books</span>
             </Link>
+          </div>
+          <div className="MiddleNav">
+            <SearchContainer />
           </div>
           <div className="RightNav">
             <button onClick={this.handleLogout.bind(this)} type="button" className="Logout Button">Logout</button>

@@ -6,6 +6,7 @@ import ErrorsReducer from './errors_reducer';
 import BookshelfReducer from './bookshelves_reducer';
 import BookshelfDetailReducer from './bookshelf_detail_reducer';
 import ReviewsReducer from './reviews_reducer';
+import SearchReducer from './search_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -14,7 +15,8 @@ const RootReducer = combineReducers({
   errors: ErrorsReducer,
   bookshelves: BookshelfReducer,
   bookshelfDetail: BookshelfDetailReducer,
-  reviews: ReviewsReducer
+  reviews: ReviewsReducer,
+  searchResults: SearchReducer
 });
 
 export default RootReducer;

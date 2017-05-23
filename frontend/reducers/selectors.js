@@ -4,6 +4,10 @@ export const selectBooks = ({ books }) => {
   return values(books);
 };
 
+export const selectSearchResults = ({ searchResults }) => {
+  return values(searchResults);
+};
+
 export const selectBook = (state, id) => (
   state.books[id] || {}
 );

@@ -1,7 +1,12 @@
 class Api::BooksController < ApplicationController
 
   def index
-    @books = Book.limit(12).offset(params[:offset]).order("id")
+    if params[:offset]
+      @books = Book.limit(12).offset(params[:offset]).order("id")
+    elsif params[:searchStr]
+      @books = Book.limit(5).where(["title LIKE ?", "%#{params[:searchStr]}%"])
+    end
+
     render :index
   end
 
