@@ -60,6 +60,10 @@
   h2 {
     margin-left: 40px;
     width: 300px;
+    cursor: pointer;
+    &:hover {
+      color: blue;
+    }
   }
 
   h3 {
@@ -71,6 +75,7 @@
 .bookshelf-list-item-cover {
   height: 150px;
   width: 100px;
+  cursor: pointer;
 }
 
 #delete-shelving-button {

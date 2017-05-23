@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Search from './search';
-import { requestSearch } from '../../actions/search_actions';
+import { requestSearch, clearSearchResults } from '../../actions/search_actions';
 import { selectSearchResults } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestSearch: searchStr => dispatch(requestSearch(searchStr))
+  requestSearch: searchStr => dispatch(requestSearch(searchStr)),
+  clearResults: () => dispatch(clearSearchResults())
 });
 
 export default connect(

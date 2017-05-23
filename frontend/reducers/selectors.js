@@ -5,7 +5,7 @@ export const selectBooks = ({ books }) => {
 };
 
 export const selectSearchResults = ({ searchResults }) => {
-  return values(searchResults);
+  return values(searchResults) || [];
 };
 
 export const selectBook = (state, id) => (

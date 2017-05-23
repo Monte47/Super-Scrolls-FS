@@ -49,6 +49,9 @@ class Navbar extends React.Component {
               </div>
             </Link>
           </div>
+          <div className="MiddleNav">
+            <SearchContainer />
+          </div>
           <div className="RightNav">
             <Link to="/login">
               <button type="button" className='Login Button'>Login</button>
