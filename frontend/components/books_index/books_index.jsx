@@ -3,14 +3,37 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import BooksIndexItem from './books_index_item';
 
 class BooksIndex extends React.Component {
-
-  componentDidMount() {
-    this.props.requestBooks();
+  constructor(props) {
+    super(props);
+    this.handleInfiniteScrolling = this.handleInfiniteScrolling.bind(this);
+    this.state = {
+      totalBooks: 0,
+      continueFetching: true
+    };
   }
 
   componentWillMount() {
-    this.props.requestBooks();
+    if(this.props.books.length === 0) {
+      this.props.requestBooks(0);
+    }
+    document.addEventListener('scroll', this.handleInfiniteScrolling);
   }
+
+  componentWillReceiveProps(nextProps) {
+    const nextTotalBooks = nextProps.books.length;
+    if(nextTotalBooks % 12 !== 0) {
+      this.setState({ continueFetching: false});
+    }
+    this.setState({ totalBooks: nextTotalBooks });
+  }
+
+  handleInfiniteScrolling() {
+    if(document.body.scrollHeight - 200 < document.body.scrollTop + window.innerHeight && this.state.continueFetching) {
+      this.props.requestBooks(this.state.totalBooks);
+    }
+  }
+
+
 
   render() {
     const { books } = this.props;

@@ -1,9 +1,10 @@
-export const fetchBooks = () => (
-  $.ajax({
+export const fetchBooks = (offset) => {
+  return $.ajax({
     method: 'GET',
-    url: 'api/books'
-  })
-);
+    url: 'api/books',
+    data: { offset }
+  });
+};
 
 export const fetchBook = (id) => (
   $.ajax({

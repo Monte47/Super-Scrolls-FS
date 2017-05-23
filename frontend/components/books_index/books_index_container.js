@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestBooks: () => dispatch(requestBooks())
+  requestBooks: offset => dispatch(requestBooks(offset))
 });
 
 export default connect(

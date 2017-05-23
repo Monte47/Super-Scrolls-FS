@@ -14,8 +14,8 @@ export const clearErrors = errors => ({
   errors
 });
 
-export const requestBooks = () => dispatch => {
-  return APIUtil.fetchBooks().then(books => dispatch(receiveBooks(books)));
+export const requestBooks = offset => dispatch => {
+  return APIUtil.fetchBooks(offset).then(books => dispatch(receiveBooks(books)));
 };
 
 export const requestBook = (id) => dispatch => {
