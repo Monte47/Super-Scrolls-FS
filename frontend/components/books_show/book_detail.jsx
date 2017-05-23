@@ -75,6 +75,7 @@ class BookDetail extends React.Component {
   renderBookshelves() {
     let { bookDetail } = this.props;
     const bookshelves = this.props.bookshelves;
+    if(this.props.currentUser.id) {      
       return (
         <section className="book-detail-shelves-container">
           <form className="book-show-bookshelf-form" onSubmit={this.handleCreateShelving}>
@@ -88,6 +89,7 @@ class BookDetail extends React.Component {
           {this.renderShelves(bookDetail.bookshelves)}
         </section>
       );
+    }
   }
 
   render() {
