@@ -47,3 +47,14 @@
   justify-content: center;
   padding: 15px;
 }
+
+#image-upload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: auto;
+  margin-bottom: 10px;
+  background-color: $third;
+  border-radius: 30px;
+}

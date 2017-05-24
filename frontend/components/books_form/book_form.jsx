@@ -77,7 +77,7 @@ class BookForm extends React.Component {
               onChange={this.update("description")}
               placeholder="description">
             </textarea>
-            <button onClick={this.uploadImg}>Upload Cover Image</button>
+            <div id="image-upload-button" onClick={this.uploadImg}>Upload Cover Image</div>
             <button onClick={this.handleSubmit} className="create-book-button">Create Book</button>
           </form>
         </div>
