@@ -10,6 +10,7 @@ class BookDetail extends React.Component {
     this.update = this.update.bind(this);
     this.renderShelves = this.renderShelves.bind(this);
     this.handleDeleteShelving = this.handleDeleteShelving.bind(this);
+    this.bookshelfLink = this.bookshelfLink.bind(this);
     this.state = {
       book_id: 0,
       bookshelf_id: 0
@@ -65,17 +66,23 @@ class BookDetail extends React.Component {
       <ul className="shelvings-display">
         {userShelves.map((shelf, i) =>
           <li className="shelving-display" key={i}>
-            {shelf.name}
+            <span onClick={this.bookshelfLink(shelf)}>
+              {shelf.name}
+            </span>
             <i id="delete-shelving-book-show" className="fa fa-times fa-5" onClick={this.handleDeleteShelving(shelf)}></i>
           </li>)}
       </ul>
     );
   }
 
+  bookshelfLink(shelf) {
+    return e => this.props.history.push(`/bookshelves/${shelf.id}`);
+  }
+
   renderBookshelves() {
     let { bookDetail } = this.props;
     const bookshelves = this.props.bookshelves;
-    if(this.props.currentUser.id) {      
+    if(this.props.currentUser.id) {
       return (
         <section className="book-detail-shelves-container">
           <form className="book-show-bookshelf-form" onSubmit={this.handleCreateShelving}>

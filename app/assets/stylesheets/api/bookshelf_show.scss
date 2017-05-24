@@ -25,7 +25,9 @@
   }
 
   .bookshelf-list-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-items: center;
     align-items: center;
     justify-content: space-around;
     background-color: $fourth;
@@ -33,11 +35,13 @@
     :first-child {
       font-family: PayTone One;
       font-size: 30px;
+      margin-left: 60%;
     }
     :last-child {
       font-family: Paytone One;
       font-size: 30px;
       border-right: none;
+      margin-right: 20%;
     }
   }
 
@@ -45,13 +49,21 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    :last-child{
+      border-bottom: none;
+    }
   }
 
 }
 .bookshelf-books-list-item {
   display: flex;
-  padding: 30px;
-  padding-bottom: 5px;
+  margin: 1%;
+  padding: 10px;
+  border-bottom: solid;
+  border-color: $first;
+  border-width: 2px;
 }
 
 .bookshelf-list-item-details {
@@ -59,6 +71,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-right: 10px;
   h2 {
     margin-left: 40px;
     width: 300px;
