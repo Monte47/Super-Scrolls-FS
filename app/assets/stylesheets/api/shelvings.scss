@@ -32,3 +32,11 @@
     color: grey;
   }
 }
+
+#shelving-display {
+  cursor: pointer;
+  margin-right: 3px;
+  &:hover {
+    color: #3232ff;
+  }
+}

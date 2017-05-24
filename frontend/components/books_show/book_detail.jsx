@@ -66,7 +66,7 @@ class BookDetail extends React.Component {
       <ul className="shelvings-display">
         {userShelves.map((shelf, i) =>
           <li className="shelving-display" key={i}>
-            <span onClick={this.bookshelfLink(shelf)}>
+            <span id="shelving-display" onClick={this.bookshelfLink(shelf)}>
               {shelf.name}
             </span>
             <i id="delete-shelving-book-show" className="fa fa-times fa-5" onClick={this.handleDeleteShelving(shelf)}></i>
