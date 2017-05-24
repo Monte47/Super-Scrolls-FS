@@ -86,8 +86,8 @@ class BookDetail extends React.Component {
       return (
         <section className="book-detail-shelves-container">
           <form className="book-show-bookshelf-form" onSubmit={this.handleCreateShelving}>
-            <select onChange={this.update("bookshelf_id")} defaultValue="Bookshelf">
-              <option defaultValue disabled>Bookshelf</option>
+            <select onChange={this.update("bookshelf_id")} defaultValue="Select a bookshelf...">
+              <option defaultValue disabled>Select a bookshelf...</option>
               {bookshelves.map(bookshelf => <option key={bookshelf.id} value={bookshelf.id}>{bookshelf.name}</option>)}
             </select>
             <button id="show-add-to-bookshelf-button">Add to Shelf</button>
