@@ -27,7 +27,8 @@
         align-items: center;
         justify-content: center;
         background-color: $second;
-        border-bottom: solid #000;
+        border-bottom: solid $first;
+        border-width: 2px;
         .review-details {
           width: 100%;
           display: flex;
@@ -43,6 +44,7 @@
           p {
             width: 80%;
             text-align: center;
+            line-height: 25px;
           }
         }
       }
