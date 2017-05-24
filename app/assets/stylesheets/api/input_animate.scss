@@ -1,3 +1,6 @@
+@import "colors";
+
+
 label {
   display: block;
   letter-spacing: 4px;
@@ -5,7 +8,7 @@ label {
   text-align: center;
 }
 label .label-text {
-  color: black;
+  color: $first;
   cursor: text;
   font-size: 20px;
   line-height: 20px;
@@ -19,7 +22,7 @@ label .label-text {
 label input {
   background-color: transparent;
   border: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $first;
   color: white;
   font-size: 24px;
   letter-spacing: -1px;

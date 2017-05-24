@@ -53,12 +53,14 @@
 
 #login-submit {
   background-color: white;
-  color: black;
-  font-family: Patua One;
+  color: $first;
+  font-family: Comfortaa;
+  width: 250px;
   font-weight: bold;
   font-size: 20px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  margin-bottom: 20px;
 }
 
 #login-submit:hover {
