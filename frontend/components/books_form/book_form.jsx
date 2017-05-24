@@ -11,6 +11,7 @@ class BookForm extends React.Component {
       image_url: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.uploadImg = this.uploadImg.bind(this);
   }
 
   componentDidMount() {
@@ -20,7 +21,7 @@ class BookForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createBook(this.state)
-    .then(data => this.props.history.push(`/books/${data.id}`));
+    .then(data => this.props.history.push(`/books/${data.id}/`));
   }
 
   update(property) {
@@ -37,12 +38,24 @@ class BookForm extends React.Component {
     }
   }
 
+  uploadImg(e) {
+    e.preventDefault();
+     window.cloudinary.openUploadWidget(
+       window.CLOUDINARY_OPTIONS,
+       function(error, images){
+         if(!error) {
+           this.setState({ image_url: images[0].url});
+         }
+       }.bind(this)
+     );
+  }
+
   render() {
     return (
       <section className="create-book">
         <div className="book-form-box">
           <h2>Create a New Book</h2>
-          <form className="book-form" onSubmit={this.handleSubmit}>
+          <form className="book-form">
             <ul className="errors-list">
               {this.errors()}
             </ul>
@@ -64,13 +77,8 @@ class BookForm extends React.Component {
               onChange={this.update("description")}
               placeholder="description">
             </textarea>
-            <input
-              type="text"
-              value={this.state.image_url}
-              onChange={this.update("image_url")}
-              placeholder="image_url"
-              />
-            <button className="create-book-button">Create Book</button>
+            <button onClick={this.uploadImg}>Upload Cover Image</button>
+            <button onClick={this.handleSubmit} className="create-book-button">Create Book</button>
           </form>
         </div>
       </section>
