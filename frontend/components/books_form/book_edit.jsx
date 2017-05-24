@@ -11,6 +11,7 @@ class EditBookForm extends React.Component {
       image_url: "",
       id: parseInt(this.props.match.params.bookId)
     };
+    this.uploadImg = this.uploadImg.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -52,12 +53,24 @@ class EditBookForm extends React.Component {
     }
   }
 
+  uploadImg(e) {
+    e.preventDefault();
+     window.cloudinary.openUploadWidget(
+       window.CLOUDINARY_OPTIONS,
+       function(error, images){
+         if(!error) {
+           this.setState({ image_url: images[0].url});
+         }
+       }.bind(this)
+     );
+  }
+
   render() {
     return (
       <section className="create-book">
         <div className="book-form-box">
           <h2>Edit:  {this.state.title}</h2>
-          <form className="book-form" onSubmit={this.handleSubmit}>
+          <form className="book-form">
             <ul className="errors-list">
               {this.errors()}
             </ul>
@@ -76,12 +89,8 @@ class EditBookForm extends React.Component {
               value={this.state.description}
               onChange={this.update("description")}>
             </textarea>
-            <input
-              type="text"
-              value={this.state.image_url}
-              onChange={this.update("image_url")}
-              />
-            <button className="create-book-button">Update Book</button>
+              <button id="image-upload-button" onClick={this.uploadImg}>Upload Cover Image</button>
+              <button onClick={this.handleSubmit} className="create-book-button">Create Book</button>
           </form>
         </div>
       </section>
