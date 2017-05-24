@@ -206,7 +206,82 @@ b39 = Book.create(title: "All Quiet on the Western Front",
                   author: "Erich Maria Remarque",
                   description: "All Quiet on the Western Front (German: Im Westen nichts Neues, lit. 'In the West Nothing New') is a novel by Erich Maria Remarque, a German veteran of World War I. The book describes the German soldiers' extreme physical and mental stress during the war, and the detachment from civilian life felt by many of these soldiers upon returning home from the front.",
                   image_url: "https://res.cloudinary.com/dbc0rv0hu/image/upload/v1495393126/all_quiet_on_the_western_front_by_nguy0699-d1sdwh4_oxrvng.jpg")
-
+bxx = Book.create(title:"Invisible Monsters",
+author:"Chuck Palahniuk",
+description: "Palahniuk’s fashion-model protagonist has it all—boyfriend, career, loyal best friend—until an accident destroys her face, her ability to speak, and her self-esteem. Enter Brandy Alexander, Queen Supreme, one operation away from becoming a bona-fide woman. Laced in are new chapters of memoir and further scenes with the book’s characters. Readers will jump between chapters, reread the book to understand the dissolve between fiction and fact, and decipher the playful book design, embarking on a ride they’ll never forget",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591571/Invisible-Monsters_fmen8e.jpg")
+bxx = Book.create(title:"Choke",
+author:"Chuck Palahniuk",
+description: "Victor Mancini, a medical-school dropout, is an antihero for our deranged times. Needing to pay elder care for his mother, Victor has devised an ingenious scam: he pretends to choke on pieces of food while dining in upscale restaurants. He then allows himself to be “saved” by fellow patrons who, feeling responsible for Victor’s life, go on to send checks to support him. When he’s not pulling this stunt, Victor cruises sexual addiction recovery workshops for action, visits his addled mom, and spends his days working at a colonial theme park. His creator, Chuck Palahniuk, is the visionary we need and the satirist we deserve.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591615/choke_rzcfft.jpg")
+bxx = Book.create(title:"Brave New World",
+author:"Aldous Huxley",
+description: "Far in the future, the World Controllers have created the ideal society. Through clever use of genetic engineering, brainwashing and recreational sex and drugs, all its members are happy consumers. Bernard Marx seems alone harbouring an ill-defined longing to break free. A visit to one of the few remaining Savage Reservations, where the old, imperfect life still continues, may be the cure for his distress...",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591684/brave-new-world_pirxfw.jpg")
+bxx = Book.create(title:"Democracy in America",
+author:"Alexis de Tocqueville",
+description: "emocracy in America has had the singular honor of being even to this day the work that political commentators of every stripe refer to when they seek to draw large conclusions about the society of the USA. Alexis de Tocqueville, a young French aristocrat, came to the young nation to investigate the functioning of American democracy & the social, political & economic life of its citizens, publishing his observations in 1835 & 1840. Brilliantly written, vividly illustrated with vignettes & portraits, Democracy in America is far more than a trenchant analysis of one society at a particular point in time. What will most intrigue modern readers is how many of the observations still hold true: on the mixed advantages of a free press, the strained relations among the races & the threats posed to democracies by consumerism & corruption.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591730/democracy-in-america_ckceit.png")
+bxx = Book.create(title:"World War Z",
+author:"Max Brooks",
+description: "The Zombie War came unthinkably close to eradicating humanity. Max Brooks, driven by the urgency of preserving the acid-etched first-hand experiences of the survivors from those apocalyptic years, traveled across the United States of America and throughout the world, from decimated cities that once teemed with upwards of thirty million souls to the most remote and inhospitable areas of the planet. He recorded the testimony of men, women, and sometimes children who came face-to-face with the living, or at least the undead, hell of that dreadful time. 'World War Z' is the result. Never before have we had access to a document that so powerfully conveys the depth of fear and horror, and also the ineradicable spirit of resistance, that gripped human society through the plague years.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591768/wwz_moeaj2.jpg")
+bxx = Book.create(title:"Dr. Jekyll & Mr. Hyde",
+author:"Robert Louis Stevenson",
+description: "In this harrowing tale of good and evil, the mild-mannered Dr. Jekyll develops a potion that unleashes his secret, inner persona—the loathsome, twisted Mr. Hyde.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591797/jeckyll-hide_dqqf6q.jpg")
+bxx = Book.create(title:"Frankenstein",
+author:"Mary Shelley",
+description: "Mary Shelley began writing Frankenstein when she was only eighteen. At once a Gothic thriller, a passionate romance, and a cautionary tale about the dangers of science, Frankenstein tells the story of committed science student Victor Frankenstein. Obsessed with discovering the cause of generation and life and bestowing animation upon lifeless matter, Frankenstein assembles a human being from stolen body parts but; upon bringing it to life, he recoils in horror at the creature's hideousness. Tormented by isolation and loneliness, the once-innocent creature turns to evil and unleashes a campaign of murderous revenge against his creator, Frankenstein",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591845/frakenstein_st3hpb.jpg")
+bxx = Book.create(title:"Blood Meridian",
+author:"Cormac McCarthy",
+description: "An epic novel of the violence and depravity that attended America's westward expansion, Blood Meridian brilliantly subverts the conventions of the Western novel and the mythology of the 'wild west.' Based on historical events that took place on the Texas-Mexico border in the 1850s, it traces the fortunes of the Kid, a fourteen-year-old Tennesseean who stumbles into the nightmarish world where Indians are being murdered and the market for their scalps is thriving.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591875/blood-meridian_wxyqoa.jpg")
+bxx = Book.create(title:"Neuromancer",
+author:"William Gibson",
+description: "Case had been the sharpest data-thief in the business, until vengeful former employers crippled his nervous system. But now a new and very mysterious employer recruits him for a last-chance run. The target: an unthinkably powerful artificial intelligence orbiting Earth in service of the sinister Tessier-Ashpool business clan. With a dead man riding shotgun and Molly, mirror-eyed street-samurai, to watch his back, Case embarks on an adventure that ups the ante on an entire genre of fiction.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591929/neuromancer_sjruni.jpg")
+bxx = Book.create(title:"Hamlet",
+author:"",
+description: "One of the greatest plays of all time, the compelling tragedy of the tormented young prince of Denmark continues to capture the imaginations of modern audiences worldwide. Confronted with evidence that his uncle murdered his father, and with his mother’s infidelity, Hamlet must find a means of reconciling his longing for oblivion with his duty as avenger. The ghost, Hamlet’s feigned madness, Ophelia’s death and burial, the play within a play, the 'closet scene' in which Hamlet accuses his mother of complicity in murder, and breathtaking swordplay are just some of the elements that make Hamlet an enduring masterpiece of the theater.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591952/hamlet_zsxbs3.png")
+bxx = Book.create(title:"A Midsummer Night's Dream",
+author:"William Shakespeare",
+description: "Shakespeare's intertwined love polygons begin to get complicated from the start--Demetrius and Lysander both want Hermia but she only has eyes for Lysander. Bad news is, Hermia's father wants Demetrius for a son-in-law. On the outside is Helena, whose unreturned love burns hot for Demetrius. Hermia and Lysander plan to flee from the city under cover of darkness but are pursued by an enraged Demetrius (who is himself pursued by an enraptured Helena). In the forest, unbeknownst to the mortals, Oberon and Titania (King and Queen of the faeries) are having a spat over a servant boy. The plot twists up when Oberon's head mischief-maker, Puck, runs loose with a flower which causes people to fall in love with the first thing they see upon waking. Throw in a group of labourers preparing a play for the Duke's wedding (one of whom is given a donkey's head and Titania for a lover by Puck) and the complications become fantastically funny.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591983/midsummer-night_cepgty.png")
+bxx = Book.create(title:"Sex, Drugs, and Cocoa Puffs",
+author:"Chuck Klosterman",
+description: "Countless writers and artists have spoken for a generation, but no one has done it quite like Chuck Klosterman. With an exhaustive knowledge of popular culture and an almost effortless ability to spin brilliant prose out of unlikely subject matter, Klosterman attacks the entire spectrum of postmodern America: reality TV, Internet porn, Pamela Anderson, literary Jesus freaks, and the real difference between apples and oranges (of which there is none). And don't even get him started on his love life and the whole Harry-Met-Sally situation",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592020/sex-drugs-and-cocoa-puffs-9780743236003_hr_tdfq2j.jpg")
+bxx = Book.create(title:"Moby Dick",
+author:"Herman Melville",
+description: "So begins Herman Melville's masterpiece, one of the greatest works of imagination in literary history. As Ishmael is drawn into Captain Ahab's obsessive quest to slay the white whale Moby-Dick, he finds himself engaged in a metaphysical struggle between good and evil. More than just a novel of adventure, more than an paean to whaling lore and legend, Moby-Dick is a haunting social commentary, populated by some of the most enduring characters in literature; the crew of the Pequod, from stern, Quaker First Mate Starbuck, to the tattooed Polynesian harpooner Queequeg, are a vision of the world in microcosm, the pinnacle of Melville's lifelong meditation on America. Written with wonderfully redemptive humour, Moby-Dick is a profound, poetic inquiry into character, faith, and the nature of perception.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592064/Moby_Dick_ALT_dld7v4.jpg")
+bxx = Book.create(title:"Walden",
+author:"Henry David Thoreau",
+description: "Walden, or, Life in the Woods, is an American book written by noted transcendentalist Henry David Thoreau. The work is part personal declaration of independence, social experiment, voyage of spiritual discovery, satire, and manual for self-reliance. Published in 1854, it details Thoreau's experiences over the course of two years in a cabin he built near Walden Pond, amid woodland owned by his friend and mentor Ralph Waldo Emerson, near Concord, Massachusetts.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592095/walden_hwvatd.jpg")
+bxx = Book.create(title:"Galapagos",
+author:"Kurt Vonnegut",
+description: "Galápagos takes the reader back one million years, to A.D. 1986. A simple vacation cruise suddenly becomes an evolutionary journey. Thanks to an apocalypse, a small group of survivors stranded on the Galápagos Islands are about to become the progenitors of a brave, new, and totally different human race. In this inimitable novel, America’s master satirist looks at our world and shows us all that is sadly, madly awry–and all that is worth saving.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592117/galapagos_2_ldcu9o.jpg")
+bxx = Book.create(title:"Good Omens",
+author:"Terry Pratchett and Neil Gaiman",
+description: "So the armies of Good and Evil are amassing, Atlantis is rising, frogs are falling, tempers are flaring. Everything appears to be going according to Divine Plan. Except a somewhat fussy angel and a fast-living demon—both of whom have lived amongst Earth's mortals since The Beginning and have grown rather fond of the lifestyle—are not actually looking forward to the coming Rapture.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592179/good-omens_q83uyk.jpg")
+bxx = Book.create(title:"Infinite Jest",
+author:"David Foster Wallace",
+description: "Set in an addicts' halfway house and a tennis academy, and featuring the most endearingly screwed-up family to come along in recent fiction, Infinite Jest explores essential questions about what entertainment is and why it has come to so dominate our lives; about how our desire for entertainment affects our need to connect with other people; and about what the pleasures we choose say about who we are.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592207/infinite-jest_ehpkcy.jpg")
+bxx = Book.create(title:"Don Quixote",
+author:"Miguel de Cervantes",
+description: "Don Quixote has become so entranced by reading chivalric romances, that he determines to become a knight-errant himself. In the company of his faithful squire, Sancho Panza, his exploits blossom in all sorts of wonderful ways. While Quixote's fancy often leads him astray – he tilts at windmills, imagining them to be giants – Sancho acquires cunning and a certain sagacity. Sane madman and wise fool, they roam the world together, and together they have haunted readers' imaginations for nearly four hundred years.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592228/don-qui_dveush.jpg")
+bxx = Book.create(title:"The Martian",
+author:"Andy Weir",
+description: "After a dust storm nearly kills him and forces his crew to evacuate the planet while thinking him dead, Mark finds himself stranded on Mars' surface, completely alone, with no way to signal Earth that he’s alive. And even if he could get word out, his supplies would be gone years before a rescue could arrive",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592255/the-martian_n4expv.jpg")
 
 Bookshelf.destroy_all
 
