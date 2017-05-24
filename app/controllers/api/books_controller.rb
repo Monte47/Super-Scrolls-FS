@@ -4,7 +4,7 @@ class Api::BooksController < ApplicationController
     if params[:offset]
       @books = Book.limit(12).offset(params[:offset]).order("id")
     elsif params[:searchStr]
-      @books = Book.limit(5).where(["title LIKE ?", "%#{params[:searchStr]}%"])
+      @books = Book.limit(5).where(["lower(title) LIKE ?", "%#{params[:searchStr].downcase}%"])
     end
 
     render :index

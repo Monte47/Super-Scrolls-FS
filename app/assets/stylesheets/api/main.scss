@@ -19,6 +19,54 @@ body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+input {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  background-color: #18121E;
+  color: white;
+  border-style: none;
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  padding: 3px;
+}
+
+textarea {
+  display: flex;
+  width: 600px;
+  height: 200px;
+  resize: none;
+  font-family: Comfortaa;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+#book-logo {
+  color: white;
+  margin-right: 10px;
+  &:hover {
+    color: $third;
+  }
+}
+
+
 button {
   display: flex;
   justify-content: center;
@@ -49,52 +97,4 @@ button:active {
 
 button:focus {
   outline: 0;
-}
-
-a {
-  text-decoration: none;
-  padding: 5px;
-  color: black;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-}
-
-a:hover {
-  color: white;
-  cursor: pointer;
-}
-
-input {
-  display: flex;
-  width: 200px;
-  justify-content: center;
-  background-color: #18121E;
-  color: white;
-  border-style: none;
-  font-family: Comfortaa;
-  font-weight: bold;
-  text-align: center;
-  height: 30px;
-  padding: 3px;
-}
-
-textarea {
-  display: flex;
-  width: 600px;
-  height: 200px;
-  resize: none;
-  font-family: Comfortaa;
-  font-size: 16px;
-  border-radius: 5px;
-  outline: none;
-  padding: 5px;
-  margin-bottom: 20px;
-}
-
-#book-logo {
-  color: white;
-  margin-right: 10px;
-  &:hover {
-    color: $third;
-  }
 }
