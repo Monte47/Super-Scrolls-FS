@@ -19,7 +19,9 @@ const mapDispatchToProps = dispatch => ({
   createShelving: shelving => dispatch(createShelving(shelving)),
   destroyShelving: shelving => dispatch(destroyShelving(shelving)),
   requestReviews: book_id => dispatch(requestReviews(book_id)),
-  requestBookshelves: () => dispatch(requestBookshelves())
+  requestBookshelves: () => dispatch(requestBookshelves()),
+  createLike: like => dispatch(createLike(like)),
+  deleteLike: id => dispatch(deleteLike(id))
 });
 
 export default connect(

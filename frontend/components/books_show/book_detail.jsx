@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import ReviewsIndexContainer from '../reviews_index/reviews_index_container';
+import LikeButton from './like_button';
 
 class BookDetail extends React.Component {
   constructor(props) {
