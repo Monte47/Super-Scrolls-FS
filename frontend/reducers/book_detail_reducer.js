@@ -7,7 +7,8 @@ const defaultBook = {
   author: "",
   description: "",
   image_url: "",
-  likes: []
+  likes: [],
+  liked: false
 };
 
 export default (state = defaultBook, action) => {

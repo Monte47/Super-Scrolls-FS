@@ -6,5 +6,10 @@ class Book < ApplicationRecord
   has_many :bookshelves, through: :shelvings
   has_many :reviews, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :users, through: :likes
+
+  def liked?(user)
+    self.users.include?(user)
+  end
 
 end
