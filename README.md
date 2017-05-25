@@ -38,10 +38,22 @@ Users can organize books in bookshelves. To view one's bookshelves a user can si
 
 ### **Search**
 
+Users can search for books by title anywhere in SuperScrolls via the Navbar. The search bar will list a dropdown of the first 5 books that meet the criteria. Users can click on any of the search results to be routed to that book's page.
+
 ## **Future Plans for SuperScrolls**
+
+#### Author Pages
+
+Users would be able to click on the author name anywhere it is listed to be directed to that author's individual page. Here would be information about the author as well as their bibliography.
 
 #### Comments and Likes
 
 I would like to add features to like both books and reviews as well as add chainable comments to reviews.
 
-####
+#### Improvement to the Search function
+
+I would like to be able to improve the search feature to implement search by author. Additionally I would like to display a link to view all results, instead of just the first five.
+
+#### Book Recommendations
+
+On book's page would be a list of books most liked by users who also enjoy said book.
