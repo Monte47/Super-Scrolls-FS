@@ -9,6 +9,8 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.setState = this.setState.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillUnmount() {
@@ -38,7 +40,18 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    this.props.login({username: "Monte", password:"password"});
+    let name = "Monte";
+    let password = "password";
+    
+    for (let i = 0; i < name.length; i++) {
+      setTimeout(() => this.setState({username: name.slice(0, i + 1)}), (i * 100));
+    }
+
+    for (let j = 0; j < password.length; j++) {
+      setTimeout(() => this.setState({password: password.slice(0, j + 1)}), ((j + 5) * 100));
+    }
+
+    setTimeout(() => this.props.processForm(this.state), 1400);
   }
 
   errors() {
