@@ -1,3 +1,4 @@
+
 #Super Scrolls
 
 [Superscrolls][heroku]
@@ -21,7 +22,7 @@ Users can sign up for SuperScrolls, which implements a hand-rolled authenticatio
 
 ### **Books**
 
-The front page of the app is the Books index, or the library. Users can scroll through the list of books to browse the selection. This page utilized an infinite scrolling feature, which checks if the user is near the bottom of the page, and fetches more books to render.
+The front page of the app is the Books index, or the library. Users can scroll through the list of books to browse the selection. This page utilizes an infinite scrolling feature, which checks if the user is near the bottom of the page, and fetches more books to display.
 
 ### **Individual Books**
 
@@ -29,7 +30,7 @@ By clicking on a book via the front page, a user will be redirected to that book
 
 ### **Reviews**
 
-Users can read reviews of books and create one of their own. Users can also delete and edit their own review. Users can only have one review per book. To edit a review a user can simply click their review and a form will appear in place of the review body.
+Users can read reviews of books and write one of their own. Users can also delete and edit their own review. Users can only write one review per book. To edit a review a user can simply click their review and a form will appear in place of the review body.
 
 ### **Bookshelves**
 
