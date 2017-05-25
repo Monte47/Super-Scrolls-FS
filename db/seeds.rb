@@ -41,16 +41,10 @@ u30 = User.create(username: Faker::Book.author, password: "password")
 
 Book.destroy_all
 
-b1 = Book.create(title: "The Catcher in the Rye",
-                author: "J.D. Salinger",
-                description: "The hero-narrator of The Catcher in the Rye is an ancient
-                 child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances
-                  that tend to preclude adult, secondhand description, he leaves his prep school in
-                  Pennsylvania and goes underground in New York City for three days. The boy himself
-                  is at once too simple and too complex for us to make any final comment about him or
-                  his story. Perhaps the safest thing we can say about Holden is that he was born in
-                  the world not just strongly attracted to beauty but, almost, hopelessly impaled on it.",
-                image_url: "https://i.imgur.com/5gOuuxi.jpg")
+b17 = Book.create(title: "The Metamorphosis",
+                  author: "Franz Kafka",
+                  description: "As Gregor Samsa awoke one morning from uneasy dreams he found himself transformed in his bed into a gigantic insect. He was laying on his hard, as it were armor-plated, back and when he lifted his head a little he could see his domelike brown belly divided into stiff arched segments on top of which the bed quilt could hardly keep in position and was about to slide off completely. His numerous legs, which were pitifully thin compared to the rest of his bulk, waved helplessly before his eyes.",
+                  image_url: "https://i.imgur.com/gQdM5NK.jpg")
 b2 = Book.create(title: "Do Androids Dream of Electric Sheep?",
                 author: "Phillip K. Dick",
                 description: "In the futuristic year of 2019, Los Angeles has become a dark
@@ -100,6 +94,16 @@ b10 = Book.create(title: "Slaughterhouse-Five",
                   author: "Kurt Vonnegut",
                   description: "Kurt Vonnegut's absurdist classic Slaughterhouse-Five introduces us to Billy Pilgrim, a man who becomes unstuck in time after he is abducted by aliens from the planet Tralfamadore. In a plot-scrambling display of virtuosity, we follow Pilgrim simultaneously through all phases of his life, concentrating on his (and Vonnegut's) shattering experience as an American prisoner of war who witnesses the firebombing of Dresden.",
                   image_url: "https://i.imgur.com/LwHwoSz.jpg")
+b1 = Book.create(title: "The Catcher in the Rye",
+                author: "J.D. Salinger",
+                description: "The hero-narrator of The Catcher in the Rye is an ancient
+                 child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances
+                  that tend to preclude adult, secondhand description, he leaves his prep school in
+                  Pennsylvania and goes underground in New York City for three days. The boy himself
+                  is at once too simple and too complex for us to make any final comment about him or
+                  his story. Perhaps the safest thing we can say about Holden is that he was born in
+                  the world not just strongly attracted to beauty but, almost, hopelessly impaled on it.",
+                image_url: "https://i.imgur.com/5gOuuxi.jpg")
 b11 = Book.create(title: "Stranger in a Strange Land",
                   author: "Robert A. Heinlein",
                   description: "Valentine Michael Smith is a human being raised on Mars, newly returned to Earth. Among his people for the first time, he struggles to understand the social mores and prejudices of human nature that are so alien to him, while teaching them his own fundamental beliefs in grokking, watersharing, and love.",
@@ -124,10 +128,6 @@ b16 = Book.create(title: "Ender's Game",
                   author: "Orson Scott Card",
                   description: "Andrew 'Ender' Wiggin thinks he is playing computer simulated war games; he is, in fact, engaged in something far more desperate. The result of genetic experimentation, Ender may be the military genius Earth desperately needs in a war against an alien enemy seeking to destroy all human life. The only way to find out is to throw Ender into ever harsher training, to chip away and find the diamond inside, or destroy him utterly. Ender Wiggin is six years old when it begins. He will grow up fast.",
                   image_url: "https://i.imgur.com/4gOA2cN.jpg")
-b17 = Book.create(title: "The Metamorphosis",
-                  author: "Franz Kafka",
-                  description: "As Gregor Samsa awoke one morning from uneasy dreams he found himself transformed in his bed into a gigantic insect. He was laying on his hard, as it were armor-plated, back and when he lifted his head a little he could see his domelike brown belly divided into stiff arched segments on top of which the bed quilt could hardly keep in position and was about to slide off completely. His numerous legs, which were pitifully thin compared to the rest of his bulk, waved helplessly before his eyes.",
-                  image_url: "https://i.imgur.com/gQdM5NK.jpg")
 b18 = Book.create(title: "Siddhartha",
                   author: "Hermann Hesse",
                   description: "In the novel, Siddhartha, a young man, leaves his family for a contemplative life, then, restless, discards it for one of the flesh. He conceives a son, but bored and sickened by lust and greed, moves on again. Near despair, Siddhartha comes to a river where he hears a unique sound. This sound signals the true beginning of his life—the beginning of suffering, rejection, peace, and, finally, wisdom.",

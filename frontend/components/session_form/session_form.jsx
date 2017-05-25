@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     let name = "Monte";
     let password = "password";
-    
+
     for (let i = 0; i < name.length; i++) {
       setTimeout(() => this.setState({username: name.slice(0, i + 1)}), (i * 100));
     }
@@ -51,7 +51,7 @@ class SessionForm extends React.Component {
       setTimeout(() => this.setState({password: password.slice(0, j + 1)}), ((j + 5) * 100));
     }
 
-    setTimeout(() => this.props.processForm(this.state), 1400);
+    setTimeout(() => this.props.login(this.state), 1400);
   }
 
   errors() {
