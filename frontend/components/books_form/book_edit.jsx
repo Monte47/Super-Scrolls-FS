@@ -90,7 +90,7 @@ class EditBookForm extends React.Component {
               onChange={this.update("description")}>
             </textarea>
               <button id="image-upload-button" onClick={this.uploadImg}>Upload Cover Image</button>
-              <button onClick={this.handleSubmit} className="create-book-button">Create Book</button>
+              <button onClick={this.handleSubmit} className="create-book-button">Update Book</button>
           </form>
         </div>
       </section>
