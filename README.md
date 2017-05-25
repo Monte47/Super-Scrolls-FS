@@ -35,14 +35,21 @@ By clicking on a book via the front page, a user will be redirected to that book
 
 Users can read reviews of books and write one of their own. Users can also delete and edit their own review. Users can only write one review per book. To edit a review a user can simply click their review and a form will appear in place of the review body.
 
+![](https://i.gyazo.com/9eb43fcdf8b92f933efc2cec6539707f.gif)
+
 ### **Bookshelves**
 
 Users can organize books in bookshelves. To view one's bookshelves a user can simply click on the "My Books" link in the navbar. Here a user can view, create, and delete their bookshelves. By default a user starts with 3 bookshelves which cannot be deleted. These are the "Have Read", "Currently Reading", and "Want to Read" shelves. These shelves are also mutually exclusive in that a book cannot be on more than one at the same time. If a user adds a book to one of these three shelves, it will automatically be removed from either of the other two.
+
+![](https://i.gyazo.com/4d30dc966bf347e90d5dd7f81cb22224.gif)
+![](https://i.gyazo.com/3a2c368b7bb99c2592b44f2243f47c2b.gif)
 
 
 ### **Search**
 
 Users can search for books by title anywhere in SuperScrolls via the Navbar. The search bar will list a dropdown of the first 5 books that meet the criteria. Users can click on any of the search results to be routed to that book's page.
+
+![](https://i.gyazo.com/8940c3147baa2daad1dadb59b7f272f9.gif)
 
 ## **Future Plans for SuperScrolls**
 
@@ -61,3 +68,7 @@ I would like to be able to improve the search feature to implement search by aut
 #### Book Recommendations
 
 On book's page would be a list of books most liked by users who also enjoy said book.
+
+#### Mobile Friendly
+
+Implement proper CSS media queries to make SuperScrolls more accessible to mobile devices.
