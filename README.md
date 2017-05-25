@@ -1,8 +1,5 @@
 
-#Super Scrolls
-
-[Superscrolls][heroku]
-[heroku]: http://superscrolls.herokuapp.com
+# [**Super Scrolls**](http://superscrolls.herokuapp.com)
 
 SuperScrolls is a single page web application inspired by [Goodreads][goodreads]. SuperScrolls allows users to browse, search, edit, review and create books, as well as manage bookshelves.
 
@@ -14,19 +11,25 @@ The stack for SuperScrolls includes:
 * Ruby on Rails
 * React / Redux
 
-#Features and Implementation
+# **Features and Implementation**
 
 ### **User Registration**
 
 Users can sign up for SuperScrolls, which implements a hand-rolled authentication relying on a hashed/salted password. Users can also use a demo account to view certain features which have been restricted to registered guests. User settings are saved via cookies and are kept logged in between sessions.
 
+![](https://i.gyazo.com/8289f06a6d2957e011e3388a7f5add29.gif)
+
 ### **Books**
 
 The front page of the app is the Books index, or the library. Users can scroll through the list of books to browse the selection. This page utilizes an infinite scrolling feature, which checks if the user is near the bottom of the page, and fetches more books to display.
 
+![](https://i.gyazo.com/490e40864cab85af515e6fcc78378257.gif)
+
 ### **Individual Books**
 
 By clicking on a book via the front page, a user will be redirected to that book's page. Here the user can view/edit the book's details or delete the book entirely. Reviews for that particular book are shown at the bottom of the page. If a user is logged in, they can add that book to one of their bookshelves or add a review of their own.
+
+![](https://i.gyazo.com/287b894682e1588634bd05ace8422635.gif)
 
 ### **Reviews**
 
