@@ -4,7 +4,7 @@ class Api::LikesController < ApplicationController
     @like = Like.new(like_params)
     @like.user_id = current_user.id
     if @like.save
-      render :show
+      render json: @like.book
     else
       render json: @like.errors.full_messages, status: 422
     end
@@ -13,7 +13,7 @@ class Api::LikesController < ApplicationController
   def destroy
     @like = Like.find(params[:id])
     @like.destroy
-    render json: @like
+    render json: @like.book
   end
 
   def like_params
