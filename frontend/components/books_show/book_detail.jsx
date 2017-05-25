@@ -106,6 +106,7 @@ class BookDetail extends React.Component {
         <div className="inner-show">
           <figure>
             <img src={bookDetail.image_url} alt={bookDetail.name} />
+            <h3>{bookDetail.likes.length} likes</h3>
           </figure>
           <div className="right-book-detail">
             <div className="book-details">

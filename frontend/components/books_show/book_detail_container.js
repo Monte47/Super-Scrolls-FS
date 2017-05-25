@@ -5,6 +5,7 @@ import { createShelving, destroyShelving } from '../../actions/shelvings_actions
 import { requestReviews } from '../../actions/review_actions';
 import { requestBookshelves } from '../../actions/bookshelf_actions';
 import { selectBookshelves } from '../../reducers/selectors';
+import { createLike, deleteLike } from '../../actions/like_actions';
 
 const mapStateToProps = (state) => ({
   bookDetail: state.bookDetail,
