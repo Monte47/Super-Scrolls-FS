@@ -12,11 +12,11 @@ class Book < ApplicationRecord
     self.users.include?(user)
   end
 
-  def common_likes(book)
+  def common_likes
     total_likes = []
 
-    book.likes.each do |like|
-      other_likes = like.user.likes.reject{ |like| like.book.id == book.id }
+    self.likes.each do |like|
+      other_likes = like.user.likes.reject{ |like| like.book.id == self.id }
       other_likes.each do |like|
         total_likes.push(like)
       end
