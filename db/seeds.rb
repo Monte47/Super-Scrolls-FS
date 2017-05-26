@@ -38,6 +38,57 @@ u27 = User.create(username: Faker::Book.author, password: "password")
 u28 = User.create(username: Faker::Book.author, password: "password")
 u29 = User.create(username: Faker::Book.author, password: "password")
 u30 = User.create(username: Faker::Book.author, password: "password")
+u31 = User.create(username: Faker::Book.author, password: "password")
+u32 = User.create(username: Faker::Book.author, password: "password")
+u33 = User.create(username: Faker::Book.author, password: "password")
+u34 = User.create(username: Faker::Book.author, password: "password")
+u35 = User.create(username: Faker::Book.author, password: "password")
+u36 = User.create(username: Faker::Book.author, password: "password")
+u37 = User.create(username: Faker::Book.author, password: "password")
+u38 = User.create(username: Faker::Book.author, password: "password")
+u39 = User.create(username: Faker::Book.author, password: "password")
+u40 = User.create(username: Faker::Book.author, password: "password")
+u41 = User.create(username: Faker::Book.author, password: "password")
+u42 = User.create(username: Faker::Book.author, password: "password")
+u43 = User.create(username: Faker::Book.author, password: "password")
+u44 = User.create(username: Faker::Book.author, password: "password")
+u45 = User.create(username: Faker::Book.author, password: "password")
+u46 = User.create(username: Faker::Book.author, password: "password")
+u47 = User.create(username: Faker::Book.author, password: "password")
+u48 = User.create(username: Faker::Book.author, password: "password")
+u49 = User.create(username: Faker::Book.author, password: "password")
+u50 = User.create(username: Faker::Book.author, password: "password")
+u51 = User.create(username: Faker::Book.author, password: "password")
+u52 = User.create(username: Faker::Book.author, password: "password")
+u53 = User.create(username: Faker::Book.author, password: "password")
+u54 = User.create(username: Faker::Book.author, password: "password")
+u55 = User.create(username: Faker::Book.author, password: "password")
+u56 = User.create(username: Faker::Book.author, password: "password")
+u57 = User.create(username: Faker::Book.author, password: "password")
+u58 = User.create(username: Faker::Book.author, password: "password")
+u59 = User.create(username: Faker::Book.author, password: "password")
+u60 = User.create(username: Faker::Book.author, password: "password")
+u61 = User.create(username: Faker::Book.author, password: "password")
+u62 = User.create(username: Faker::Book.author, password: "password")
+u63 = User.create(username: Faker::Book.author, password: "password")
+u64 = User.create(username: Faker::Book.author, password: "password")
+u65 = User.create(username: Faker::Book.author, password: "password")
+u66 = User.create(username: Faker::Book.author, password: "password")
+u67 = User.create(username: Faker::Book.author, password: "password")
+u68 = User.create(username: Faker::Book.author, password: "password")
+u69 = User.create(username: Faker::Book.author, password: "password")
+u70 = User.create(username: Faker::Book.author, password: "password")
+u71 = User.create(username: Faker::Book.author, password: "password")
+u72 = User.create(username: Faker::Book.author, password: "password")
+u73 = User.create(username: Faker::Book.author, password: "password")
+u74 = User.create(username: Faker::Book.author, password: "password")
+u75 = User.create(username: Faker::Book.author, password: "password")
+u76 = User.create(username: Faker::Book.author, password: "password")
+u77 = User.create(username: Faker::Book.author, password: "password")
+u78 = User.create(username: Faker::Book.author, password: "password")
+u79 = User.create(username: Faker::Book.author, password: "password")
+u80 = User.create(username: Faker::Book.author, password: "password")
+
 
 Book.destroy_all
 
@@ -254,7 +305,7 @@ author:"William Gibson",
 description: "Case had been the sharpest data-thief in the business, until vengeful former employers crippled his nervous system. But now a new and very mysterious employer recruits him for a last-chance run. The target: an unthinkably powerful artificial intelligence orbiting Earth in service of the sinister Tessier-Ashpool business clan. With a dead man riding shotgun and Molly, mirror-eyed street-samurai, to watch his back, Case embarks on an adventure that ups the ante on an entire genre of fiction.",
 image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591929/neuromancer_sjruni.jpg")
 b49 = Book.create(title:"Hamlet",
-author:"",
+author:"William Shakespeare",
 description: "One of the greatest plays of all time, the compelling tragedy of the tormented young prince of Denmark continues to capture the imaginations of modern audiences worldwide. Confronted with evidence that his uncle murdered his father, and with his mother’s infidelity, Hamlet must find a means of reconciling his longing for oblivion with his duty as avenger. The ghost, Hamlet’s feigned madness, Ophelia’s death and burial, the play within a play, the 'closet scene' in which Hamlet accuses his mother of complicity in murder, and breathtaking swordplay are just some of the elements that make Hamlet an enduring masterpiece of the theater.",
 image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495591952/hamlet_zsxbs3.png")
 b50 = Book.create(title:"A Midsummer Night's Dream",
@@ -293,6 +344,14 @@ b58 = Book.create(title:"The Martian",
 author:"Andy Weir",
 description: "After a dust storm nearly kills him and forces his crew to evacuate the planet while thinking him dead, Mark finds himself stranded on Mars' surface, completely alone, with no way to signal Earth that he’s alive. And even if he could get word out, his supplies would be gone years before a rescue could arrive",
 image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495592255/the-martian_n4expv.jpg")
+b59 = Book.create(title: "One Hundred Years of Solitude",
+author: "Gabriel García Márquez",
+description: "The novel tells the story of the rise and fall of the mythical town of Macondo through the history of the family. It is a rich and brilliant chronicle of life and death, and the tragicomedy of humankind. In the noble, ridiculous, beautiful, and tawdry story of the family, one sees all of humanity, just as in the history, myths, growth, and decay of Macondo, one sees all of Latin America.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495818425/100-solitude_h6reqn.jpg")
+b60 = Book.create(title: "Catch 22",
+author: "Joseph Heller",
+description: "At the heart of Catch-22 resides the incomparable, malingering bombardier, Yossarian, a hero endlessly inventive in his schemes to save his skin from the horrible chances of war. His problem is Colonel Cathcart, who keeps raising the number of missions the men must fly to complete their service. Yet if Yossarian makes any attempts to excuse himself from the perilous missions that he's committed to flying, he's trapped by the Great Loyalty Oath Crusade, the bureaucratic rule from which the book takes its title: a man is considered insane if he willingly continues to fly dangerous combat missions, but if he makes the necessary formal request to be relieved of such missions, the very act of making the request proves that he's sane and therefore, ineligible to be relieved.",
+image_url: "http://res.cloudinary.com/dbc0rv0hu/image/upload/v1495818717/catch-22_dzajwt.png")
 
 Bookshelf.destroy_all
 
@@ -462,3 +521,24 @@ Review.create(book_id: b54.id, user_id: u28.id, body: Faker::Lorem.sentence(20))
 Review.create(book_id: b55.id, user_id: u28.id, body: Faker::Lorem.sentence(20))
 Review.create(book_id: b56.id, user_id: u28.id, body: Faker::Lorem.sentence(20))
 Review.create(book_id: b57.id, user_id: u28.id, body: Faker::Lorem.sentence(20))
+
+1.upto(10) do |i|
+  Like.create(user_id: binding.local_variable_get("u#{i + 20}").id, book_id: binding.local_variable_get("b#{i}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 20}").id, book_id: binding.local_variable_get("b#{i + 10}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 20}").id, book_id: binding.local_variable_get("b#{i + 20}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 30}").id, book_id: binding.local_variable_get("b#{i}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 30}").id, book_id: binding.local_variable_get("b#{i + 10}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 30}").id, book_id: binding.local_variable_get("b#{i + 20}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 40}").id, book_id: binding.local_variable_get("b#{i}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 40}").id, book_id: binding.local_variable_get("b#{i + 10}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 40}").id, book_id: binding.local_variable_get("b#{i + 20}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 50}").id, book_id: binding.local_variable_get("b#{i + 30}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 50}").id, book_id: binding.local_variable_get("b#{i + 40}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 50}").id, book_id: binding.local_variable_get("b#{i + 50}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 60}").id, book_id: binding.local_variable_get("b#{i + 30}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 60}").id, book_id: binding.local_variable_get("b#{i + 40}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 60}").id, book_id: binding.local_variable_get("b#{i + 50}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 70}").id, book_id: binding.local_variable_get("b#{i + 30}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 70}").id, book_id: binding.local_variable_get("b#{i + 40}").id)
+  Like.create(user_id: binding.local_variable_get("u#{i + 70}").id, book_id: binding.local_variable_get("b#{i + 50}").id)
+end

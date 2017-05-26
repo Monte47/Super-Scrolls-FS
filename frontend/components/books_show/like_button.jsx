@@ -20,14 +20,16 @@ class LikeButton extends React.Component {
   }
 
   renderButton() {
-    if(this.props.bookDetail.liked) {
-      return (
-        <i className="fa fa-heart" aria-hidden="true" id="unlike-button" onClick={this.handleUnlike}></i>
-      );
-    } else {
-      return (
-        <i className="fa fa-heart-o" aria-hidden="true" id="like-button" onClick={this.handleLike}></i>
-      );
+    if(this.props.currentUser.id) {
+      if(this.props.bookDetail.liked) {
+        return (
+          <i className="fa fa-heart" aria-hidden="true" id="unlike-button" onClick={this.handleUnlike}></i>
+        );
+      } else {
+        return (
+          <i className="fa fa-heart-o" aria-hidden="true" id="like-button" onClick={this.handleLike}></i>
+        );
+      }
     }
   }
 
