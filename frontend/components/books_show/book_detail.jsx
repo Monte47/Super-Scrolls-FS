@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import ReviewsIndexContainer from '../reviews_index/reviews_index_container';
 import LikeButton from './like_button';
+import Recommendations from './recommendations';
 
 class BookDetail extends React.Component {
   constructor(props) {
@@ -131,6 +132,9 @@ class BookDetail extends React.Component {
             </div>
           </div>
         </div>
+        <section className="recommendations-section">
+          <Recommendations books={bookDetail.common_books}/>
+        </section>
         <section className="reviews-section">
           <ReviewsIndexContainer bookId={bookDetail.id}/>
         </section>
