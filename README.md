@@ -25,12 +25,6 @@ The front page of the app is the Books index, or the library. Users can scroll t
 
 ![](./docs/gifs/books_index.gif)
 
-### **Individual Books**
-
-By clicking on a book via the front page, a user will be redirected to that book's page. Here the user can view/edit the book's details or delete the book entirely. Reviews for that particular book are shown at the bottom of the page. If a user is logged in, they can add that book to one of their bookshelves or add a review of their own.
-
-![](./docs/gifs/book_show.gif)
-
 ### **Reviews**
 
 Users can read reviews of books and write one of their own. Users can also delete and edit their own review. Users can only write one review per book. To edit a review a user can simply click their review and a form will appear in place of the review body.
@@ -41,9 +35,20 @@ Users can read reviews of books and write one of their own. Users can also delet
 
 Users can organize books in bookshelves. To view one's bookshelves a user can simply click on the "My Books" link in the navbar. Here a user can view, create, and delete their bookshelves. By default a user starts with 3 bookshelves which cannot be deleted. These are the "Have Read", "Currently Reading", and "Want to Read" shelves. These shelves are also mutually exclusive in that a book cannot be on more than one at the same time. If a user adds a book to one of these three shelves, it will automatically be removed from either of the other two.
 
-![](./docs/gifs/bookshelves.gif)
 
 ![](./docs/gifs/shelving.gif)
+
+```javascript
+if @shelving.bookshelf.default_shelf
+  all_shelvings = Shelving.includes(:bookshelf).where(book_id: @shelving.book_id)
+  all_shelvings.each do |shelving|
+    next if shelving.id == @shelving.id
+    if shelving.bookshelf.default_shelf && current_user.id == shelving.bookshelf.user_id
+      shelving.destroy
+    end
+  end
+end
+```
 
 
 ### **Search**
@@ -51,6 +56,36 @@ Users can organize books in bookshelves. To view one's bookshelves a user can si
 Users can search for books by title anywhere in SuperScrolls via the Navbar. The search bar will list a dropdown of the first 5 books that meet the criteria. Users can click on any of the search results to be routed to that book's page.
 
 ![](./docs/gifs/search.gif)
+
+### **Book Recommendations***
+
+Displayed on a book's page are a list of book endorsements based on likes of other users. This is implemented live and will dynamically update. These books are found on the model level and passed down from the backend.
+
+```ruby
+def common_likes
+  total_likes = []
+
+  self.likes.each do |like|
+    other_likes = like.user.likes.reject{ |like| like.book.id == self.id }
+    other_likes.each do |like|
+      total_likes.push(like)
+    end
+  end
+
+  books_by_frequency = {}
+
+  total_likes.each do |like|
+    if books_by_frequency[like.book]
+      books_by_frequency[like.book] += 1
+    else
+      books_by_frequency[like.book] = 1
+    end
+  end
+
+  common_books = books_by_frequency.sort_by{ |k, v| v }
+  common_books[0..2]
+end
+```
 
 ## **Future Plans for SuperScrolls**
 
