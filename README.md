@@ -95,15 +95,11 @@ Users would be able to click on the author name anywhere it is listed to be dire
 
 #### Comments and Likes
 
-I would like to add features to like both books and reviews as well as add chainable comments to reviews.
+I would like to add a like feature as well as chainable comments to reviews.
 
 #### Improvement to the Search function
 
 I would like to be able to improve the search feature to implement search by author. Additionally I would like to display a link to view all results, instead of just the first five.
-
-#### Book Recommendations
-
-On book's page would be a list of books most liked by users who also enjoy said book.
 
 #### Mobile Friendly
 
