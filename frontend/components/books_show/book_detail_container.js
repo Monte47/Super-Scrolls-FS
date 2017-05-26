@@ -10,7 +10,8 @@ import { createLike, deleteLike } from '../../actions/like_actions';
 const mapStateToProps = (state) => ({
   bookDetail: state.bookDetail,
   bookshelves: selectBookshelves(state),
-  currentUser: state.session.currentUser || {}
+  currentUser: state.session.currentUser || {},
+  common_books: state.bookDetail.common_books || []
 });
 
 const mapDispatchToProps = dispatch => ({

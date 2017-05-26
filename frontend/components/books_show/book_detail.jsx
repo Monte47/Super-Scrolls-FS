@@ -102,7 +102,7 @@ class BookDetail extends React.Component {
   }
 
   render() {
-    const { bookDetail, createLike, deleteLike, currentUser } = this.props;
+    const { bookDetail, createLike, deleteLike, currentUser, common_books } = this.props;
     return (
       <section className="book-show">
         <div className="inner-show">
@@ -133,7 +133,7 @@ class BookDetail extends React.Component {
           </div>
         </div>
         <section className="recommendations-section">
-          <Recommendations books={bookDetail.common_books}/>
+          <Recommendations books={common_books}/>
         </section>
         <section className="reviews-section">
           <ReviewsIndexContainer bookId={bookDetail.id}/>

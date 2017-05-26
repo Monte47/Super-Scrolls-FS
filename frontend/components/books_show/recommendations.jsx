@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
+import RecommendationsItem from './recommendations_item';
 
 class Recommendations extends React.Component {
   constructor(props) {
@@ -8,8 +9,14 @@ class Recommendations extends React.Component {
 
 
   render() {
+    const { books } = this.props;
     return (
-      <div>hello</div>
+      <div>
+        <h2>People who like this book also like:</h2>
+        <ul className="recommendations=list">
+          {books.map((book, i) => <RecommendationsItem key={i} book={book} />)}
+        </ul>
+      </div>
     );
   }
 }
