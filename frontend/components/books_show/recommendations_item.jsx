@@ -9,7 +9,10 @@ class RecommendationsItem extends React.Component{
   render() {
     const { book } = this.props;
     return (
-      <h2>{book[0].title}</h2>
+      <li className="recommendations-list-item">
+        <h2>{book[0].title}</h2>
+        <img id="recommendations-item-image" src={book[0].image_url} alt={book[0].title} />
+      </li>
     );
   }
 }

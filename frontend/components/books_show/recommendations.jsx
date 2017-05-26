@@ -13,7 +13,7 @@ class Recommendations extends React.Component {
     return (
       <div>
         <h2>People who like this book also like:</h2>
-        <ul className="recommendations=list">
+        <ul className="recommendations-list">
           {books.map((book, i) => <RecommendationsItem key={i} book={book} />)}
         </ul>
       </div>

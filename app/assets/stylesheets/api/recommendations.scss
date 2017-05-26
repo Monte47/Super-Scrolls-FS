@@ -1,0 +1,39 @@
+.recommendations-section {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    text-align: center;
+    font-family: Pauta One;
+  }
+
+  .recommendations-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.recommendations-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+
+    h2 {
+      font-family: Comfortaa;
+      text-align: center;
+      font-size: 20px;
+
+    }
+}
+
+#recommendations-item-image {
+  height: 180px;
+  width: 120px;
+}
