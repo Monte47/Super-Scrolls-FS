@@ -101,13 +101,14 @@ class BookDetail extends React.Component {
   }
 
   render() {
-    const { bookDetail } = this.props;
+    const { bookDetail, createLike, deleteLike } = this.props;
     return (
       <section className="book-show">
         <div className="inner-show">
           <figure>
             <img src={bookDetail.image_url} alt={bookDetail.name} />
             <h3>{bookDetail.likes.length} likes</h3>
+            <LikeButton bookDetail={bookDetail} createLike={createLike} deleteLike={deleteLike}/>
           </figure>
           <div className="right-book-detail">
             <div className="book-details">

@@ -11,7 +11,7 @@ class Api::LikesController < ApplicationController
   end
 
   def destroy
-    @like = Link.find(book_id: like_params[:book_id], user_id: current_user.id)
+    @like = Like.find_by(book_id: like_params[:book_id], user_id: current_user.id)
     @like.destroy
     render json: @like.book
   end
