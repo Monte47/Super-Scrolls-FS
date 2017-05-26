@@ -107,8 +107,10 @@ class BookDetail extends React.Component {
         <div className="inner-show">
           <figure>
             <img src={bookDetail.image_url} alt={bookDetail.name} />
-            <h3>{bookDetail.likes.length} likes</h3>
-            <LikeButton bookDetail={bookDetail} createLike={createLike} deleteLike={deleteLike}/>
+            <div className="like-container">
+              <LikeButton bookDetail={bookDetail} createLike={createLike} deleteLike={deleteLike}/>
+              <h3>{bookDetail.likes.length} likes</h3>
+            </div>
           </figure>
           <div className="right-book-detail">
             <div className="book-details">

@@ -22,11 +22,11 @@ class LikeButton extends React.Component {
   renderButton() {
     if(this.props.bookDetail.liked) {
       return (
-        <button id="unlike-button" onClick={this.handleUnlike}>Unlike</button>
+        <i className="fa fa-heart" aria-hidden="true" id="unlike-button" onClick={this.handleUnlike}></i>
       );
     } else {
       return (
-        <button id="like-button" onClick={this.handleLike}>Like</button>
+        <i className="fa fa-heart-o" aria-hidden="true" id="like-button" onClick={this.handleLike}></i>
       );
     }
   }

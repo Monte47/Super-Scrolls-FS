@@ -113,3 +113,20 @@ select {
 select:hover {
   background-color: #3f403f;
 }
+
+.like-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#like-button {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+#unlike-button {
+  font-size: 30px;
+  margin-right: 20px;
+}
