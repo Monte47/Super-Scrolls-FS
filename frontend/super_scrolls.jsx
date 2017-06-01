@@ -20,21 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
-
-  window.signup = signup;
-  window.login = login;
-  window.logout = logout;
-  window.store = store;
-  window.createBook = createBook;
-  window.receiveBooks = receiveBooks;
-  window.receiveBook = receiveBook;
-  window.requestBooks = requestBooks;
-  window.requestBook = requestBook;
-  window.fetchBooks = fetchBooks;
-  window.selectBooks = selectBooks;
-
-
   const root = document.getElementById('root');
 
   ReactDom.render(<Root store={store}/>, root);
