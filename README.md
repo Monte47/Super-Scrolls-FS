@@ -61,32 +61,6 @@ Users can search for books by title anywhere in SuperScrolls via the Navbar. The
 
 Displayed on a book's page are a list of book endorsements based on likes of other users. This is implemented live and will dynamically update. These books are found on the model level and passed down from the backend.
 
-```ruby
-def common_likes
-  total_likes = []
-
-  self.likes.each do |like|
-    other_likes = like.user.likes.reject{ |like| like.book.id == self.id }
-    other_likes.each do |like|
-      total_likes.push(like)
-    end
-  end
-
-  books_by_frequency = {}
-
-  total_likes.each do |like|
-    if books_by_frequency[like.book]
-      books_by_frequency[like.book] += 1
-    else
-      books_by_frequency[like.book] = 1
-    end
-  end
-
-  common_books = books_by_frequency.sort_by{ |k, v| v }
-  common_books[0..2]
-end
-```
-
 ## **Future Plans for SuperScrolls**
 
 #### Author Pages
